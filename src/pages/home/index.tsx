@@ -35,7 +35,9 @@ export function Home() {
               >
                 <span className="flex items-center gap-2">
                   <span
-                    className={isCurtaButtonOpen ? "text-red" : "text-green200"}
+                    className={
+                      isCurtaButtonOpen ? "text-red200" : "text-green200"
+                    }
                   >
                     {isCurtaButtonOpen ? "×" : "+"}
                   </span>
@@ -57,7 +59,7 @@ export function Home() {
                 <span className="flex items-center gap-2">
                   <span
                     className={
-                      isTecnicoButtonOpen ? "text-red" : "text-green200"
+                      isTecnicoButtonOpen ? "text-red200" : "text-green200"
                     }
                   >
                     {isTecnicoButtonOpen ? "×" : "+"}
@@ -79,7 +81,9 @@ export function Home() {
               >
                 <span className="flex items-center gap-2">
                   <span
-                    className={isMbaButtonOpen ? "text-red" : "text-green200"}
+                    className={
+                      isMbaButtonOpen ? "text-red200" : "text-green200"
+                    }
                   >
                     {isMbaButtonOpen ? "×" : "+"}
                   </span>
@@ -104,7 +108,7 @@ export function Home() {
         <h2 className="text-green200 font-bold text-4xl mt-2">
           VÃO TE ALAVANCAR NO MERCADO DE TRABALHO!
         </h2>
-        <div className="flex gap-7">
+        <div className="flex gap-7 mt-20">
           <Card />
           <Card />
           <Card />

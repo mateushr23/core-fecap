@@ -1,6 +1,6 @@
 export function Card() {
   return (
-    <div className="w-[380px] p-4 bg-white200 rounded-3xl shadow-md mt-20">
+    <div className="w-[380px] p-4 bg-white200 rounded-3xl shadow-md">
       <div className="bg-green200 h-[190px] rounded-3xl"></div>
       <div className="mx-4">
         <h1 className="mt-7 text-gray300 font-bold text-2xl">
@@ -13,7 +13,7 @@ export function Card() {
           <div className="text-gray400 border-gray500 border rounded-full px-4 py-2 text-xs">
             EAD
           </div>
-          <div className="text-blue200100 border-blue200 border rounded-full px-4 py-2 text-xs">
+          <div className="text-blue100 border-blue200 border rounded-full px-4 py-2 text-xs">
             LIDERANÇA
           </div>
         </div>

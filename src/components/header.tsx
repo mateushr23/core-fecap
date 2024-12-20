@@ -11,7 +11,7 @@ export function Header() {
     <div className="flex flex-col">
       <div className="bg-blue300 h-[85px] flex justify-between items-center text-white px-32">
         <div className="flex gap-4 items-center">
-          <p className="text-sm">Siga nossas redes sociais</p>
+          <p className="text-sm">Siga nossas red200es sociais</p>
           <div className="flex gap-1">
             <a href="https://www.facebook.com.br/" target="_blank">
               <img src={facebook} alt="Ícone do Facebook" />
