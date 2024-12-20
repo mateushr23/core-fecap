@@ -23,6 +23,7 @@ export default {
         red100: "#FF6666",
         red200: "#E41818",
         brown100: "#DFA17E",
+        black100: "#0B0B0B",
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
