@@ -6,6 +6,8 @@ import { CurtaDuracao } from "./pages/curta-duracao"
 import { Mba } from "./pages/mba"
 import { Tecnicos } from "./pages/tecnicos"
 import { Institucional } from "./pages/institucional"
+import { CursoCurta } from "./pages/curso-curta"
+import { CursoMba } from "./pages/curso-mba"
 
 export function App() {
   return (
@@ -18,6 +20,8 @@ export function App() {
           <Route path="/mba" element={<Mba />} />
           <Route path="/tecnicos" element={<Tecnicos />} />
           <Route path="/institucional" element={<Institucional />} />
+          <Route path="/curso-curta" element={<CursoCurta />} />
+          <Route path="/curso-mba" element={<CursoMba />} />
         </Routes>
       </main>
       <Footer />

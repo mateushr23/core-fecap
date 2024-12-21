@@ -14,6 +14,8 @@ export default {
         gray300: "#B4B4B4",
         gray400: "#8B8B8B",
         gray500: "#383838",
+        gray600: "#909090",
+        gray700: "#B7B7B7",
         silver: "#CEE1EA",
         blue100: "#5FD0FF",
         blue200: "#0097D6",
@@ -26,6 +28,7 @@ export default {
         red200: "#E41818",
         brown100: "#DFA17E",
         black100: "#0B0B0B",
+        black200: "#1B1B1B",
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
