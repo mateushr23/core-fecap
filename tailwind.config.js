@@ -8,6 +8,7 @@ export default {
         white200: "#F1F3F4",
         white300: "#EDEDED",
         white400: "#E8E8E8",
+        white500: "#E1E1E1",
         gray100: "#D9D9D9",
         gray200: "#B0B0B0",
         gray300: "#B4B4B4",
