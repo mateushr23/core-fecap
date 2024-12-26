@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { ChangeEvent, useState } from "react"
 import { Carrossel } from "../../components/carrossel"
 import { BannerEscola } from "../../components/banner-escola"
 import { Parceiros } from "../../components/parceiros"
@@ -7,11 +7,41 @@ import { InfoForm } from "../../components/info-form"
 import { Card } from "../../components/card"
 import search from "../../assets/search.png"
 import banner2 from "../../assets/banner2.png"
+import { Link, useNavigate } from "react-router-dom"
+import { cursoData, Data } from "../../assets/cursos"
 
 export function Home() {
   const [isCurtaButtonOpen, setCurtaIsButtonOpen] = useState(false)
   const [isTecnicoButtonOpen, setTecnicoIsButtonOpen] = useState(false)
   const [isMbaButtonOpen, setMbaIsButtonOpen] = useState(false)
+  const [searchTerm, setSearchTerm] = useState("")
+  const [filteredCursos, setFilteredCursos] = useState<Data[]>([])
+  const navigate = useNavigate()
+
+  const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
+    const value = e.target.value
+    setSearchTerm(value)
+
+    if (value) {
+      const filtered = cursoData.filter((curso) =>
+        curso.nome.toLocaleLowerCase().includes(value.toLocaleLowerCase())
+      )
+      setFilteredCursos(filtered)
+    } else {
+      setFilteredCursos([])
+    }
+  }
+
+  const generateSlug = (categoria: string, nome: string) =>
+    `/curso/${categoria}/${nome.toLowerCase().replace(/ /g, "-")}`
+
+  const handleSuggestionClick = (categoria: string, nome: string) => {
+    const slug = generateSlug(categoria, nome)
+    setSearchTerm("")
+    setFilteredCursos([])
+    navigate(slug)
+    window.scrollTo(0, 0)
+  }
 
   return (
     <div>
@@ -19,13 +49,30 @@ export function Home() {
       {/* Barra de busca e botões de categorias */}
       <div className="h-[750px] flex flex-col items-center justify-center bg-white100">
         <div className="flex flex-col items-center">
-          <div className="flex gap-2 w-full border border-green200 rounded-full py-6 px-8">
+          <div className="flex gap-2 w-full border border-green200 rounded-full py-6 px-8 relative">
             <img src={search} alt="Ícone lupa de pesquisa" />
             <input
               className="w-full focus:outline-none bg-white100 "
               type="text"
               placeholder="Pesquisar curso desejado..."
+              value={searchTerm}
+              onChange={handleInputChange}
             />
+            {filteredCursos.length > 0 && (
+              <ul className="absolute top-full z-10 w-[900px] bg-white100 border rounded shadow-lg max-h-40 overflow-y-auto">
+                {filteredCursos.map((curso) => (
+                  <li
+                    key={curso.id}
+                    className="p-2 hover:bg-gray-200 cursor-pointer"
+                    onClick={() =>
+                      handleSuggestionClick(curso.categoria, curso.nome)
+                    }
+                  >
+                    {curso.nome}
+                  </li>
+                ))}
+              </ul>
+            )}
           </div>
           <div className="mt-24 flex gap-14">
             <div className="relative">
@@ -46,9 +93,13 @@ export function Home() {
                 <div className="absolute bottom-0 w-full left-0 bg-green200 h-[12px]" />
               </button>
               {isCurtaButtonOpen && (
-                <div className="absolute h-[40px] top-full w-full bg-green200 text-white text-center shadow-md">
+                <Link
+                  to={"/curta-duracao"}
+                  onClick={() => window.scrollTo(0, 0)}
+                  className="absolute h-[40px] top-full w-full bg-green200 text-white text-center shadow-md"
+                >
                   <p className="text-2xl">CONHECER CURSOS</p>
-                </div>
+                </Link>
               )}
             </div>
             <div className="relative">
@@ -69,9 +120,13 @@ export function Home() {
                 <div className="absolute bottom-0 w-full left-0 bg-green200 h-[12px]" />
               </button>
               {isTecnicoButtonOpen && (
-                <div className="absolute h-[40px] top-full w-full bg-green200 text-white text-center shadow-md">
+                <Link
+                  to={"/tecnicos"}
+                  onClick={() => window.scrollTo(0, 0)}
+                  className="absolute h-[40px] top-full w-full bg-green200 text-white text-center shadow-md"
+                >
                   <p className="text-2xl">CONHECER CURSOS</p>
-                </div>
+                </Link>
               )}
             </div>
             <div className="relative">
@@ -92,9 +147,13 @@ export function Home() {
                 <div className="absolute bottom-0 w-full left-0 bg-green200 h-[12px]" />
               </button>
               {isMbaButtonOpen && (
-                <div className="absolute h-[40px] top-full w-full bg-green200 text-white text-center shadow-md">
+                <Link
+                  to={"/mba"}
+                  onClick={() => window.scrollTo(0, 0)}
+                  className="absolute h-[40px] top-full w-full bg-green200 text-white text-center shadow-md"
+                >
                   <p className="text-2xl">CONHECER CURSOS</p>
-                </div>
+                </Link>
               )}
             </div>
           </div>

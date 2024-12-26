@@ -11,8 +11,19 @@ import banner from "../../assets/banner-curso-mba.png"
 import { Diferenciais } from "../../components/diferenciais"
 import professor from "../../assets/professor-mba.png"
 import { Qualidade } from "../../components/qualidade"
+import { useParams } from "react-router-dom"
+import { cursoData } from "../../assets/cursos"
+
+const revertSlug = (slug: string) => slug.replace(/-/g, " ").toLowerCase()
 
 export function CursoMba() {
+  const { id } = useParams<{ id: string }>()
+  const nome = revertSlug(id || "") // Reverte o slug
+
+  const curso = cursoData.find(
+    (curso) => curso.categoria === "mba" && curso.nome.toLowerCase() === nome
+  )
+
   return (
     <div>
       <img className="w-full" src={banner} alt="Banner curso curta duracao" />
@@ -23,25 +34,13 @@ export function CursoMba() {
               Sobre o Curso
             </h1>
             <p className="text-blue300 text-xl text-justify mt-8">
-              Preparado com as competências necessárias para ser um gestor em
-              organizações do complexo do agronegócio, no antes, dentro ou pós
-              porteira das fazendas, da mesma forma no cooperativismo,
-              associativismo, ONGs, mídia, nas funções públicas e/ou privadas,
-              em organizações da sociedade civil , com valor agregado de
-              práticas de comércio para aplicação em iniciativas próprias
-              empreendedoras e/ou desenvolvimento de suas carreiras.
+              {curso?.sobre}
             </p>
             <h1 className="text-blue300 font-bold text-3xl text-start mt-16">
               Para quem é este curso?
             </h1>
             <p className="text-blue300 text-xl text-justify mt-8">
-              Empreendedores, profissionais que já atuam, ou não, em algum
-              segmento do agronegócio, alunos formados em diversas áreas
-              acadêmicas objetivando canalizar seu foco empresarial, carreiras,
-              dentro do universo do agronegócio em todas as suas possibilidades
-              e ao mesmo tempo obter o “estado da arte da gestão do complexo do
-              agronegócio “, com ênfase nas políticas e práticas do comércio de
-              alimentos, fibras, rações, agroenergia e o biocomércio.
+              {curso?.paraQuem}
             </p>
           </div>
         </div>

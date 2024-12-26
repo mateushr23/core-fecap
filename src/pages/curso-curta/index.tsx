@@ -14,11 +14,21 @@ import downArrow from "../../assets/down-arrow.png"
 import upperArrow from "../../assets/upper-arrow.png"
 import { useState } from "react"
 import lucianoProfessor from "../../assets/luciano-professor.png"
+import { useParams } from "react-router-dom"
+import { cursoData } from "../../assets/cursos"
+
+const revertSlug = (slug: string) => slug.replace(/-/g, " ").toLowerCase()
 
 export function CursoCurta() {
   const [isModuleOpen1, setIsModuleOpen1] = useState(false)
   const [isModuleOpen2, setIsModuleOpen2] = useState(false)
   const [isModuleOpen3, setIsModuleOpen3] = useState(false)
+  const { id } = useParams<{ id: string }>()
+  const nome = revertSlug(id || "") // Reverte o slug
+
+  const curso = cursoData.find(
+    (curso) => curso.categoria === "curta" && curso.nome.toLowerCase() === nome
+  )
 
   const toggleModule1 = () => {
     setIsModuleOpen1((prev) => !prev)
@@ -42,23 +52,13 @@ export function CursoCurta() {
               Sobre o Curso
             </h1>
             <p className="text-blue300 text-xl text-justify mt-8">
-              De fato, há cargos que exigem muito do profissional que o ocupa.
-              Seja por eficiência técnica ou pela própria gestão. Então, esse
-              Curso de Gestão de Pessoas é essencial para que você desenvolva as
-              7 competências necessárias para quem deseja gerir pessoas nas
-              empresas. Com certeza, são ferramentas importantes que começam
-              pela liderança e trabalham engajamento, comunicação, feedback,
-              inteligência emocional e gestão do tempo, além do foco em
-              resultados e alinhamento do líder ao ambiente.
+              {curso?.sobre}
             </p>
             <h1 className="text-blue300 font-bold text-3xl text-start mt-16">
               Para quem é este curso?
             </h1>
             <p className="text-blue300 text-xl text-justify mt-8">
-              Principalmente esse Curso de Gestão de Pessoas visa atingir
-              líderes, potenciais ou emergentes, que querem desenvolver a
-              gestão. Ou seja, adquirir competências específicas para mobilizar
-              a equipe, focando em resultados.
+              {curso?.paraQuem}
             </p>
           </div>
         </div>

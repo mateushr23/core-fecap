@@ -20,8 +20,8 @@ export function App() {
           <Route path="/mba" element={<Mba />} />
           <Route path="/tecnicos" element={<Tecnicos />} />
           <Route path="/institucional" element={<Institucional />} />
-          <Route path="/curso-curta" element={<CursoCurta />} />
-          <Route path="/curso-mba" element={<CursoMba />} />
+          <Route path="/curso/curta/:id" element={<CursoCurta />} />
+          <Route path="/curso/mba/:id" element={<CursoMba />} />
         </Routes>
       </main>
       <Footer />
