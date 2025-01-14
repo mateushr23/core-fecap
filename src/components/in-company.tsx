@@ -1,9 +1,9 @@
-import whatsapp from "../assets/whatsapp.png"
-import barChart from "../assets/bar-chart.png"
-import fileText from "../assets/file-text.png"
-import layers from "../assets/layers.png"
-import circleCheck from "../assets/check-circle.png"
-import person from "../assets/person.png"
+import whatsapp from "../assets/images/whatsapp.png"
+import barChart from "../assets/images/bar-chart.png"
+import fileText from "../assets/images/file-text.png"
+import layers from "../assets/images/layers.png"
+import circleCheck from "../assets/images/check-circle.png"
+import person from "../assets/images/person.png"
 
 export function InCompany() {
   return (

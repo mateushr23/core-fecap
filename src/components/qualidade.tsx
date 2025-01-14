@@ -1,4 +1,4 @@
-import anambaLogo from "../assets/anamba-logo.png"
+import anambaLogo from "../assets/images/anamba-logo.png"
 
 export function Qualidade() {
   return (

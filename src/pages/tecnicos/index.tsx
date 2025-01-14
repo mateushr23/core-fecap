@@ -1,13 +1,13 @@
 import { BannerEscola } from "../../components/banner-escola"
 import { InCompany } from "../../components/in-company"
-import bannerTecnico from "../../assets/banner-tecnico.png"
+import bannerTecnico from "../../assets/images/banner-tecnico.png"
 import { InfoForm } from "../../components/info-form"
 import { Depoimentos } from "../../components/depoimentos"
-import search from "../../assets/search.png"
+import search from "../../assets/images/search.png"
 import { Card } from "../../components/card"
-import bannerExatas from "../../assets/banner-exatas.png"
-import bannerSaude from "../../assets/banner-saude.png"
-import bannerNegocios from "../../assets/banner-negocios.png"
+import bannerExatas from "../../assets/images/banner-exatas.png"
+import bannerSaude from "../../assets/images/banner-saude.png"
+import bannerNegocios from "../../assets/images/banner-negocios.png"
 import { Pagamentos } from "../../components/pagamentos"
 
 export function Tecnicos() {

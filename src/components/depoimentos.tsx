@@ -1,5 +1,5 @@
-import rightArrow from "../assets/right-green-arrow.png"
-import leftArrow from "../assets/left-green-arrow.png"
+import rightArrow from "../assets/images/right-green-arrow.png"
+import leftArrow from "../assets/images/left-green-arrow.png"
 
 export function Depoimentos() {
   return (

@@ -1,6 +1,6 @@
-import banner1 from "../assets/banner1.png"
-import leftArrow from "../assets/left-arrow.png"
-import rightArrow from "../assets/right-arrow.png"
+import banner1 from "../assets/images/banner1.png"
+import leftArrow from "../assets/images/left-arrow.png"
+import rightArrow from "../assets/images/right-arrow.png"
 
 export function Carrossel() {
   return (

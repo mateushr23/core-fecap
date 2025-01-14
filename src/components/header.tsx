@@ -1,9 +1,9 @@
-import facebook from "../assets/facebook.png"
-import instagram from "../assets/instagram.png"
-import linkedin from "../assets/linkedin.png"
-import logo from "../assets/core-fecap-logo.png"
-import user from "../assets/user.png"
-import whatsapp from "../assets/whatsapp.png"
+import facebook from "../assets/images/facebook.png"
+import instagram from "../assets/images/instagram.png"
+import linkedin from "../assets/images/linkedin.png"
+import logo from "../assets/images/core-fecap-logo.png"
+import user from "../assets/images/user.png"
+import whatsapp from "../assets/images/whatsapp.png"
 import { Link } from "react-router-dom"
 
 export function Header() {

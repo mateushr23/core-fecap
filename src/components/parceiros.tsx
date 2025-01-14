@@ -1,4 +1,4 @@
-import parceiros from "../assets/parceiros.png"
+import parceiros from "../assets/images/parceiros.png"
 
 export function Parceiros() {
   return (

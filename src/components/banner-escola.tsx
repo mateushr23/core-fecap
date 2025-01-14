@@ -1,4 +1,4 @@
-import escola from "../assets/escola-fachada.png"
+import escola from "../assets/images/escola-fachada.png"
 
 export function BannerEscola() {
   return (

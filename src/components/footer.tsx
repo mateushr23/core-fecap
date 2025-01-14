@@ -1,7 +1,7 @@
-import facebook from "../assets/facebook2.png"
-import instagram from "../assets/instagram2.png"
-import linkedin from "../assets/linkedin2.png"
-import coreLogo from "../assets/core-logo.png"
+import facebook from "../assets/images/facebook2.png"
+import instagram from "../assets/images/instagram2.png"
+import linkedin from "../assets/images/linkedin2.png"
+import coreLogo from "../assets/images/core-logo.png"
 
 export function Footer() {
   return (

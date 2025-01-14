@@ -3,16 +3,16 @@ import { Depoimentos } from "../../components/depoimentos"
 import { InCompany } from "../../components/in-company"
 import { InfoForm } from "../../components/info-form"
 import { Parceiros } from "../../components/parceiros"
-import relogio from "../../assets/relogio.png"
-import calendario from "../../assets/calendario.png"
-import pin from "../../assets/pin.png"
-import escrita from "../../assets/escrita.png"
-import banner from "../../assets/banner-curso-mba.png"
+import relogio from "../../assets/images/relogio.png"
+import calendario from "../../assets/images/calendario.png"
+import pin from "../../assets/images/pin.png"
+import escrita from "../../assets/images/escrita.png"
+import banner from "../../assets/images/banner-curso-mba.png"
 import { Diferenciais } from "../../components/diferenciais"
-import professor from "../../assets/professor-mba.png"
 import { Qualidade } from "../../components/qualidade"
 import { useParams } from "react-router-dom"
 import { cursoData } from "../../assets/cursos"
+import { Professor } from "../../components/professor"
 
 const revertSlug = (slug: string) => slug.replace(/-/g, " ").toLowerCase()
 
@@ -91,53 +91,8 @@ export function CursoMba() {
         <h1 className="font-bold text-white bg-green200 w-[560px] py-4 text-3xl text-center mt-52 mb-24">
           COORDENAÇÃO DO CURSO
         </h1>
-        <div className="flex w-[1110px] h-[520px] items-center text-center bg-black100">
-          <img
-            className="h-full flex-grow"
-            src={professor}
-            alt="Professor José Luiz Tejon"
-          />
-          <div className="w-[790px]  h-full text-justify text-white bg-black100">
-            <h1 className="ml-6 mt-12 font-bold text-3xl">José Luiz Tejon</h1>
-            <p className="mt-12 ml-6 mr-20 text-base">
-              Doutor em Educação pela Ude Uruguay; Mestre em Arte, Educação e
-              História da Cultura pela Universidade Mackenzie; Jornalista e
-              publicitário pela fundação Casper Líbero. Especialista em
-              marketing na Pace University Nova Iorque; em Agribusiness na
-              Harvard Business School, em New Mídia no MIT e em Liderança no
-              Insead.Foi professor de pós-graduação por 30 anos na ESPM e por 5
-              anos no CEAG da FGV. Professor convidado de instituições como
-              Fundação Dom Cabral, Fgv incompany, Fia-Pensa / Usp, Insper. Foi
-              diretor de empresas, como Jacto S/A, Agroceres S/A, grupo do
-              Jornal o Estado de São Paulo. Fundador e ex-presidente da ABMRA-
-              Associação Brasileira de Marketing Rural e Agronegócio.Membro do
-              conselho superior do Agro sustentável, do agronegócio da Fiesp,
-              Conselho da Secretaria de Justiça e Cidadania do Estado de São
-              Paulo. Conselheiro de empresas do agronegócio. Possui 34 livros em
-              autoria e coautoria, colunista da rede Jovem Pan, do Estadão
-              on-line, Mundo Coop, Feed Food, jornal A tarde da Bahia, O liberal
-              do Pará , de diversas mídias e sócio diretor da
-              Biomarketing.Responsável pelo segmento brasileiro no master
-              science Fam, food & agribusiness management na Audencia Business
-              School, Nantes, França. Coordenador do Agribusiness Center da
-              FECAP.
-            </p>
-            <div className="flex gap-4 ml-6 mt-10">
-              <a
-                className="border-2 border-gray700 text-gray600 text-base font-semibold px-4 py-2 rounded-3xl"
-                href="#"
-              >
-                Linkedin
-              </a>
-              <a
-                className="border-2 border-gray700 text-gray600 text-base font-semibold px-4 py-2 rounded-3xl"
-                href="#"
-              >
-                LATTES
-              </a>
-            </div>
-          </div>
-        </div>
+
+        <Professor variant="jose" />
       </div>
       <Qualidade />
       <div className="h-[650px] bg-black100 flex flex-col items-center ">

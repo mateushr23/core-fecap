@@ -1,5 +1,5 @@
-import cartoes from "../assets/pagamento-cartoes.png"
-import boleto from "../assets/boleto-pix.png"
+import cartoes from "../assets/images/pagamento-cartoes.png"
+import boleto from "../assets/images/boleto-pix.png"
 
 export function Pagamentos() {
   return (

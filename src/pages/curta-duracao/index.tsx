@@ -1,8 +1,8 @@
 import { BannerEscola } from "../../components/banner-escola"
 import { InCompany } from "../../components/in-company"
 import { Parceiros } from "../../components/parceiros"
-import bannerCurta from "../../assets/banner-curta.png"
-import search from "../../assets/search.png"
+import bannerCurta from "../../assets/images/banner-curta.png"
+import search from "../../assets/images/search.png"
 import { Card } from "../../components/card"
 import { Depoimentos } from "../../components/depoimentos"
 
@@ -40,7 +40,7 @@ export function CurtaDuracao() {
             CURSOS MAIS PROCURADOS!
           </h1>
           <div className="flex gap-7 mt-11">
-            <Card /> 
+            <Card />
             <Card />
             <Card />
           </div>
@@ -61,7 +61,7 @@ export function CurtaDuracao() {
               LIDERANÇA
             </button>
             <button className="border border-green200 text-green200 px-20 py-4 text-2xl">
-              ADM
+              GESTÃO
             </button>
           </div>
           <div className="flex gap-7 mt-32">

@@ -1,7 +1,7 @@
-import professor from "../assets/professor.png"
-import networking from "../assets/networking.png"
-import pasta from "../assets/pasta.png"
-import contrucao from "../assets/construcao.png"
+import professor from "../assets/images/professor.png"
+import networking from "../assets/images/networking.png"
+import pasta from "../assets/images/pasta.png"
+import contrucao from "../assets/images/construcao.png"
 
 export function Diferenciais() {
   return (
