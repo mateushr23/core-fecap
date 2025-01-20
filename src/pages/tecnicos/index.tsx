@@ -2,16 +2,13 @@ import { BannerEscola } from "../../components/banner-escola"
 import { InCompany } from "../../components/in-company"
 import bannerTecnico from "../../assets/images/banner-tecnico.png"
 import { InfoForm } from "../../components/info-form"
-import { Depoimentos } from "../../components/depoimentos"
 import search from "../../assets/images/search.png"
 import { Card } from "../../components/card"
-import bannerExatas from "../../assets/images/banner-exatas.png"
-import bannerSaude from "../../assets/images/banner-saude.png"
-import bannerNegocios from "../../assets/images/banner-negocios.png"
-import { Pagamentos } from "../../components/pagamentos"
 import { useNavigate } from "react-router-dom"
 import { useState, ChangeEvent } from "react"
 import { Data, cursoData } from "../../assets/cursos"
+import bannerAdm from "../../assets/images/banner-adm.png"
+import bannerSaude from "../../assets/images/banner-saude.png"
 
 export function Tecnicos() {
   const [searchTerm, setSearchTerm] = useState("")
@@ -84,8 +81,8 @@ export function Tecnicos() {
       </div>
       <div className="h-[1040px] bg-white100 flex items-center justify-center">
         <div className="flex flex-col items-center ">
-          <h1 className="text-white font-bold text-4xl bg-green200 px-5 py-4">
-            CURSOS MAIS PROCURADOS!
+          <h1 className="text-white font-bold text-4xl bg-green200 px-16 py-4">
+            CURSOS OFERECIDOS!
           </h1>
           <div className="flex gap-7 mt-11">
             <Card />
@@ -94,41 +91,73 @@ export function Tecnicos() {
           </div>
         </div>
       </div>
-      <div className="h-[3170px] bg-white300 flex flex-col items-center justify-center">
-        <h1 className="text-blue300 font-bold text-4xl">TODOS OS CURSOS</h1>
-        <h1 className="text-white font-bold text-4xl bg-green200 w-[560px] py-4 text-center mt-4">
-          POR CATEGORIA
-        </h1>
-        <div className="mt-32">
-          <img src={bannerExatas} alt="Banner exatas e adm" />
-          <div className="flex gap-7 mt-12">
-            <Card />
-            <Card />
-            <Card />
-            <Card />
+      <div className="h-[720px] bg-blue400 flex flex-col">
+        <img className="w-full" src={bannerAdm} />
+        <div className="flex text-white gap-72">
+          <div className="w-[880px] ml-32 text-justify hyphens-auto text-white -mt-20">
+            <h1 className="font-bold text-4xl ">
+              CURSOS DE EXATAS E ADM NO MERCADO
+            </h1>
+            <p className="text-xl mt-12 font-thin">
+              O profissional administrativo tem amplas possibilidades no mercado
+              de trabalho! Com a duração de 12 meses, o curso Técnico em
+              Administração capacita você a executar atividades administrativas
+              relacionadas aos processos de gestão de pessoas, de operações
+              logísticas, gestão de materiais e patrimônio, de marketing, de
+              vendas e de finanças.
+            </p>
+            <p className="text-xl mt-4 font-thin">
+              Atua em organizações públicas e privadas de segmentos variados,
+              tais como das áreas de comércio, de serviços, da indústria, de
+              consultoria, de ensino e pesquisa, relacionando-se com equipes de
+              diversos setores da organização, por meio da prestação de serviços
+              autônomos, temporários ou contrato efetivo.
+            </p>
           </div>
-        </div>
-        <div className="mt-32">
-          <img src={bannerSaude} alt="Banner exatas e adm" />
-          <div className="flex gap-7 mt-12">
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-          </div>
-        </div>
-        <div className="mt-32">
-          <img src={bannerNegocios} alt="Banner exatas e adm" />
-          <div className="flex gap-7 mt-12">
-            <Card />
-            <Card />
-            <Card />
-            <Card />
+          <div className="items-center flex flex-col">
+            <h1 className="font-bold text-4xl -mt-20 w-[310px] text-center">
+              PROFISSIONAL NO MERCADO
+            </h1>
+            <div className="bg-green200 rounded-3xl text-center mt-2 py-8 w-[420px] flex flex-col gap-2">
+              <h3 className="font-bold text-xl">Média Salarial:</h3>
+              <h2 className="font-bold text-4xl">R$ 3.507,18</h2>
+              <p className="font-thin text-xl">Coordenador Administrativo</p>
+            </div>
           </div>
         </div>
       </div>
-      <Pagamentos />
-      <Depoimentos />
+      <div className=" flex flex-col relative justify-center">
+        <img className="w-full h-full" src={bannerSaude} />
+        <div className="flex text-white gap-72 absolute">
+          <div className="w-[880px] ml-32 text-justify hyphens-auto text-white">
+            <h1 className="font-bold text-4xl ">CURSOS DE SAÚDE NO MERCADO</h1>
+            <p className="text-xl mt-12 font-thin">
+              O curso técnico em enfermagem prepara os estudantes para atuar
+              como profissionais de saúde na área da enfermagem, fornecendo os
+              conhecimentos e as habilidades necessários para cuidar de
+              pacientes, auxiliar em procedimentos médicos, administrar
+              medicamentos e colaborar com a equipe de saúde.
+            </p>
+            <p className="text-xl mt-4 font-thin">
+              O mercado de trabalho é formado por profissionais que desempenham
+              um papel crucial no fornecimento de cuidados diretos aos
+              pacientes, trabalhando em colaboração com enfermeiros e outros
+              profissionais de saúde, seja como auxiliar de enfermagem ou outros
+              cargos que desempenham papéis relacionados à saúde coletiva.
+            </p>
+          </div>
+          <div className="items-center flex flex-col">
+            <h1 className="font-bold text-4xl w-[310px] text-center">
+              PROFISSIONAL NO MERCADO
+            </h1>
+            <div className="bg-green200 rounded-3xl text-center mt-2 py-8 w-[420px] flex flex-col gap-2">
+              <h3 className="font-bold text-xl">Média Salarial:</h3>
+              <h2 className="font-bold text-4xl">R$ 3.325,24</h2>
+              <p className="font-thin text-xl">Técnico de Enfermagem</p>
+            </div>
+          </div>
+        </div>
+      </div>
       <BannerEscola />
       <InCompany />
       <InfoForm />

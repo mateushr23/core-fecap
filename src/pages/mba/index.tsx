@@ -1,7 +1,7 @@
 import { BannerEscola } from "../../components/banner-escola"
 import { InCompany } from "../../components/in-company"
 import { Parceiros } from "../../components/parceiros"
-import banner from "../../assets/images/banner1.png"
+import carrossel1 from "../../assets/images/carrossel1.png"
 import coreFecapLogo from "../../assets/images/core-fecap-white.png"
 import { Card } from "../../components/card"
 import { Diferenciais } from "../../components/diferenciais"
@@ -10,7 +10,7 @@ import { Qualidade } from "../../components/qualidade"
 export function Mba() {
   return (
     <div>
-      <img className="w-full" src={banner} alt="Banner de desconto Fecap" />
+      <img className="w-full" src={carrossel1} alt="Banner de desconto Fecap" />
       <div className="h-[2050px] bg-black100 flex flex-col items-center">
         <div className="flex flex-col items-center">
           <h1 className="mt-48 text-white font-bold text-4xl">

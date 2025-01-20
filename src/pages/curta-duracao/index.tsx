@@ -4,7 +4,6 @@ import { Parceiros } from "../../components/parceiros"
 import bannerCurta from "../../assets/images/banner-curta.png"
 import search from "../../assets/images/search.png"
 import { Card } from "../../components/card"
-import { Depoimentos } from "../../components/depoimentos"
 import { ChangeEvent, useState } from "react"
 import { cursoData, Data } from "../../assets/cursos"
 import { useNavigate } from "react-router-dom"
@@ -115,7 +114,7 @@ export function CurtaDuracao() {
           </div>
         </div>
       </div>
-      <Depoimentos />
+
       <Parceiros />
       <InCompany />
       <BannerEscola />

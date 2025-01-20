@@ -3,17 +3,14 @@ import barChart from "../assets/images/bar-chart.png"
 import fileText from "../assets/images/file-text.png"
 import layers from "../assets/images/layers.png"
 import circleCheck from "../assets/images/check-circle.png"
-import person from "../assets/images/person.png"
+import incompany from "../assets/images/incompany.png"
 
 export function InCompany() {
   return (
-    <div className="flex relative">
-      <img
-        className="absolute bottom-0 left-[48%] transform -translate-x-1/2"
-        src={person}
-      />
-      <div className="bg-blue300 h-[800px] w-[800px] flex flex-col items-center justify-center">
-        <div>
+    <div className="relative w-full">
+      <img className="w-full" src={incompany} />
+      <div className="absolute top-0 left-0 w-full h-full flex items-center z-10">
+        <div className="ml-72 mr-[25%]">
           <div className="w-[310px]">
             <h1 className="text-white font-bold text-4xl mb-6">
               CAPACITAÇÃO
@@ -34,9 +31,7 @@ export function InCompany() {
             </button>
           </div>
         </div>
-      </div>
-      <div className="bg-gradient-to-br from-white400 to-gray200 flex-1 flex items-center">
-        <div className="bg-blue300 ml-[40%] w-[560px] rounded-3xl px-20 py-10 flex gap-10">
+        <div className="bg-blue300 w-[560px] rounded-3xl px-20 py-10 flex gap-10">
           <div className="flex flex-col gap-8 mt-2">
             <img src={barChart} />
             <img src={fileText} />

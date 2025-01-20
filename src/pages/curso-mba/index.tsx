@@ -1,5 +1,4 @@
 import { BannerEscola } from "../../components/banner-escola"
-import { Depoimentos } from "../../components/depoimentos"
 import { InCompany } from "../../components/in-company"
 import { InfoForm } from "../../components/info-form"
 import { Parceiros } from "../../components/parceiros"
@@ -112,7 +111,6 @@ export function CursoMba() {
           INSCREVA-SE
         </button>
       </div>
-      <Depoimentos />
       <InfoForm />
       <Parceiros />
       <InCompany />

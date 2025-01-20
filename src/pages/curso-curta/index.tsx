@@ -1,5 +1,4 @@
 import { BannerEscola } from "../../components/banner-escola"
-import { Depoimentos } from "../../components/depoimentos"
 import { InCompany } from "../../components/in-company"
 import { InfoForm } from "../../components/info-form"
 import { Pagamentos } from "../../components/pagamentos"
@@ -152,7 +151,7 @@ export function CursoCurta() {
         </div>
       </div>
       <Professor variant={curso?.variant} />
-      <Depoimentos />
+   
       <Pagamentos />
       <div className="h-[650px] bg-white300 flex flex-col items-center ">
         <h1 className="font-bold text-4xl bg-green200 p-4 text-white mt-52">

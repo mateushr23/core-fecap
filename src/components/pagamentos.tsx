@@ -3,16 +3,16 @@ import boleto from "../assets/images/boleto-pix.png"
 
 export function Pagamentos() {
   return (
-    <div className="h-[900px] bg-blue300 flex flex-col items-center relative">
-      <h1 className="font-bold text-4xl text-white bg-green200 py-4 px-8 absolute top-[-8%] transform translate-y-1/2">
+    <div className="h-[1040px] bg-blue300 flex flex-col items-center ">
+      <h1 className="font-bold text-4xl text-white bg-green200 py-4 px-8 mt-24">
         FORMAS DE PAGAMENTO FACILITADAS!
       </h1>
-      <p className="mt-24 text-white text-xl text-center">
+      <p className="mt-14 text-white text-xl text-center font-thin">
         A Core disponibiliza formas de pagamento facilitadas para que você
         consiga dar o próximo passo
         <br /> da sua carreira, veja a baixo como você pode cursar conosco:
       </p>
-      <div className="flex items-center w-[1500px]">
+      <div className="flex items-center w-[1500px] ">
         <div>
           <h1 className="font-bold text-4xl text-white">CARTÕES DE CRÉDITO</h1>
           <div className="h-1 w-[380px] bg-green200 mt-4" />
@@ -22,7 +22,7 @@ export function Pagamentos() {
         </div>
         <img src={cartoes} alt="" />
       </div>
-      <div className="flex  items-center w-[1500px]">
+      <div className="flex items-center w-[1500px] -">
         <div className="mr-40">
           <h1 className="font-bold text-4xl text-white">PIX E BOLETO</h1>
           <div className="h-1 w-[380px] bg-green200 mt-4" />
