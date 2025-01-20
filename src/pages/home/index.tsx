@@ -32,11 +32,11 @@ export function Home() {
     }
   }
 
-  const generateSlug = (categoria: string, nome: string) =>
-    `/curso/${categoria}/${nome.toLowerCase().replace(/ /g, "-")}`
+  const generateSlug = (categoria: string, id: string) =>
+    `/curso/${categoria}/${id}`
 
-  const handleSuggestionClick = (categoria: string, nome: string) => {
-    const slug = generateSlug(categoria, nome)
+  const handleSuggestionClick = (categoria: string, id: string) => {
+    const slug = generateSlug(categoria, id)
     setSearchTerm("")
     setFilteredCursos([])
     navigate(slug)
@@ -65,7 +65,7 @@ export function Home() {
                     key={curso.id}
                     className="p-2 hover:bg-gray-200 cursor-pointer"
                     onClick={() =>
-                      handleSuggestionClick(curso.categoria, curso.nome)
+                      handleSuggestionClick(curso.categoria, curso.id)
                     }
                   >
                     {curso.nome}
@@ -172,9 +172,13 @@ export function Home() {
           <Card />
           <Card />
         </div>
-        <button className="mt-28 border-2 border-green200 text-green200 font-bold py-5 px-6 rounded-2xl">
+        <Link
+          to={"/curta-duracao"}
+          onClick={() => window.scrollTo(0, 0)}
+          className="mt-28 border-2 border-green200 text-green200 font-bold py-5 px-6 rounded-2xl"
+        >
           CONHEÇA TODOS OS CURTA-DURAÇÃO
-        </button>
+        </Link>
       </div>
       <img src={banner2} alt="Banner de desconto Fecap" />
       <BannerEscola />

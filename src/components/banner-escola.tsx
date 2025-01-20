@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import escola from "../assets/images/escola-fachada.png"
 
 export function BannerEscola() {
@@ -16,14 +17,18 @@ export function BannerEscola() {
           <h2 className="text-green200 font-bold text-4xl mb-6 mt-2">
             COM A INOVAÇÃO ESTRATÉGICA
           </h2>
-          <p className="text-white text-xl">
+          <p className="text-white text-xl mb-8">
             A CORE é uma empresa jovem e moderna, dedicada a proporcionar aos
             seus clientes as melhores estratégias, alinhadas às demandas do
             mercado.
           </p>
-          <button className="mt-8 border-2 border-green200 py-3 px-6 text-green200 font-bold rounded-2xl">
+          <Link
+            to={"/"}
+            onClick={() => window.scrollTo(0, 0)}
+            className="border-2 border-green200 py-3 px-6 text-green200 font-bold rounded-2xl"
+          >
             CONHEÇA A CORE
-          </button>
+          </Link>
         </div>
       </div>
     </div>

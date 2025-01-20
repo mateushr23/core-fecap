@@ -9,8 +9,40 @@ import bannerExatas from "../../assets/images/banner-exatas.png"
 import bannerSaude from "../../assets/images/banner-saude.png"
 import bannerNegocios from "../../assets/images/banner-negocios.png"
 import { Pagamentos } from "../../components/pagamentos"
+import { useNavigate } from "react-router-dom"
+import { useState, ChangeEvent } from "react"
+import { Data, cursoData } from "../../assets/cursos"
 
 export function Tecnicos() {
+  const [searchTerm, setSearchTerm] = useState("")
+  const [filteredCursos, setFilteredCursos] = useState<Data[]>([])
+  const navigate = useNavigate()
+
+  const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
+    const value = e.target.value
+    setSearchTerm(value)
+
+    if (value) {
+      const filtered = cursoData.filter((curso) =>
+        curso.nome.toLocaleLowerCase().includes(value.toLocaleLowerCase())
+      )
+      setFilteredCursos(filtered)
+    } else {
+      setFilteredCursos([])
+    }
+  }
+
+  const generateSlug = (categoria: string, id: string) =>
+    `/curso/${categoria}/${id}`
+
+  const handleSuggestionClick = (categoria: string, id: string) => {
+    const slug = generateSlug(categoria, id)
+    setSearchTerm("")
+    setFilteredCursos([])
+    navigate(slug)
+    window.scrollTo(0, 0)
+  }
+
   return (
     <div>
       <img
@@ -26,16 +58,28 @@ export function Tecnicos() {
           <div className="flex gap-2 border border-green200 rounded-full py-6 px-8">
             <img src={search} alt="Ícone lupa de pesquisa" />
             <input
-              className="w-[300px] focus:outline-none bg-blue300 text-white "
+              className="w-[780px] focus:outline-none bg-blue300 text-white "
               type="text"
               placeholder="Pesquisar curso desejado..."
+              value={searchTerm}
+              onChange={handleInputChange}
             />
+            {filteredCursos.length > 0 && (
+              <ul className="absolute mt-12 z-10 w-[700px] bg-white100 border rounded shadow-lg max-h-40 overflow-y-auto">
+                {filteredCursos.map((curso) => (
+                  <li
+                    key={curso.id}
+                    className="p-2 hover:bg-gray-200 cursor-pointer"
+                    onClick={() =>
+                      handleSuggestionClick(curso.categoria, curso.id)
+                    }
+                  >
+                    {curso.nome}
+                  </li>
+                ))}
+              </ul>
+            )}
           </div>
-          <select
-            className="border w-[380px] focus:outline-none bg-blue300 text-white border-green200 rounded-full py-6 px-8 font-semibold text-base"
-            name=""
-            id=""
-          ></select>
         </div>
       </div>
       <div className="h-[1040px] bg-white100 flex items-center justify-center">

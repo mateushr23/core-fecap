@@ -89,8 +89,7 @@ export function CursoCurta() {
               <div className="ml-2">
                 <h2 className="text-xl text-white">Valores</h2>
                 <h3 className="text-2xl text-white font-bold">
-                  12x de R$498/mês{" "}
-                  <span className="font-normal">(Total de R$5.976)</span>
+                  Consultar valores
                 </h3>
               </div>
             </div>

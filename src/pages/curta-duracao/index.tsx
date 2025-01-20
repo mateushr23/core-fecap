@@ -5,8 +5,39 @@ import bannerCurta from "../../assets/images/banner-curta.png"
 import search from "../../assets/images/search.png"
 import { Card } from "../../components/card"
 import { Depoimentos } from "../../components/depoimentos"
+import { ChangeEvent, useState } from "react"
+import { cursoData, Data } from "../../assets/cursos"
+import { useNavigate } from "react-router-dom"
 
 export function CurtaDuracao() {
+  const [searchTerm, setSearchTerm] = useState("")
+  const [filteredCursos, setFilteredCursos] = useState<Data[]>([])
+  const navigate = useNavigate()
+
+  const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
+    const value = e.target.value
+    setSearchTerm(value)
+
+    if (value) {
+      const filtered = cursoData.filter((curso) =>
+        curso.nome.toLocaleLowerCase().includes(value.toLocaleLowerCase())
+      )
+      setFilteredCursos(filtered)
+    } else {
+      setFilteredCursos([])
+    }
+  }
+
+  const generateSlug = (categoria: string, id: string) =>
+    `/curso/${categoria}/${id}`
+
+  const handleSuggestionClick = (categoria: string, id: string) => {
+    const slug = generateSlug(categoria, id)
+    setSearchTerm("")
+    setFilteredCursos([])
+    navigate(slug)
+    window.scrollTo(0, 0)
+  }
   return (
     <div>
       <img
@@ -18,20 +49,32 @@ export function CurtaDuracao() {
         <h1 className="text-blue300 font-bold text-4xl mb-16">
           VEJA NOSSOS CURSOS DISPONÍVEIS
         </h1>
-        <div className="flex gap-4  w-[780px] justify-between">
+        <div className="flex gap-4 w-[780px] justify-between">
           <div className="flex gap-2 border border-green200 rounded-full py-6 px-8">
             <img src={search} alt="Ícone lupa de pesquisa" />
             <input
-              className="w-[300px] focus:outline-none bg-white300 "
+              className="w-[780px] focus:outline-none bg-white300 "
               type="text"
               placeholder="Pesquisar curso desejado..."
+              value={searchTerm}
+              onChange={handleInputChange}
             />
+            {filteredCursos.length > 0 && (
+              <ul className="absolute mt-12 z-10 w-[700px] bg-white100 border rounded shadow-lg max-h-40 overflow-y-auto">
+                {filteredCursos.map((curso) => (
+                  <li
+                    key={curso.id}
+                    className="p-2 hover:bg-gray-200 cursor-pointer"
+                    onClick={() =>
+                      handleSuggestionClick(curso.categoria, curso.id)
+                    }
+                  >
+                    {curso.nome}
+                  </li>
+                ))}
+              </ul>
+            )}
           </div>
-          <select
-            className="border w-[380px] focus:outline-none bg-white300 border-green200 rounded-full py-6 px-8 font-semibold text-base"
-            name=""
-            id=""
-          ></select>
         </div>
       </div>
       <div className="bg-white100 h-[2340px] flex flex-col">
