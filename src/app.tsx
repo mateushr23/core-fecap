@@ -8,6 +8,7 @@ import { Tecnicos } from "./pages/tecnicos"
 import { Institucional } from "./pages/institucional"
 import { CursoCurta } from "./pages/curso-curta"
 import { CursoMba } from "./pages/curso-mba"
+import { InCompany } from "./pages/incompany"
 
 export function App() {
   return (
@@ -20,6 +21,7 @@ export function App() {
           <Route path="/mba" element={<Mba />} />
           <Route path="/tecnicos" element={<Tecnicos />} />
           <Route path="/institucional" element={<Institucional />} />
+          <Route path="/incompany" element={<InCompany />} />
           <Route path="/curso/curta/:id" element={<CursoCurta />} />
           <Route path="/curso/mba/:id" element={<CursoMba />} />
         </Routes>
