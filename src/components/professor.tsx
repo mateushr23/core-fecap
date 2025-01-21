@@ -25,21 +25,28 @@ export function Professor({ variant }: ProfessorProps) {
         <div
           className={`w-[790px] h-full text-justify ${professor?.cores.text} `}
         >
-          <h1 className="ml-6 mt-12 font-bold text-3xl">{professor?.nome}</h1>
-          <p className="mt-12 ml-6 mr-20 text-base">{professor?.descricao}</p>
-          <div className="flex gap-4 ml-6 mt-10">
-            <a
-              className="border-2 border-gray700 text-gray600 text-base font-semibold px-4 py-2 rounded-3xl"
-              href="#"
-            >
-              Linkedin
-            </a>
-            <a
-              className="border-2 border-gray700 text-gray600 text-base font-semibold px-4 py-2 rounded-3xl"
-              href="#"
-            >
-              LATTES
-            </a>
+          <h1 className="ml-6 mt-6 font-bold text-3xl">{professor?.nome}</h1>
+          <p className="mt-8 ml-6 mr-20 text-base">{professor?.descricao}</p>
+          <div className="flex gap-4 ml-6 mt-5">
+            {professor?.linkedin && (
+              <a
+                className="border-2 border-gray700 text-gray600 text-base font-semibold px-4 py-2 rounded-3xl"
+                href={professor?.linkedin}
+                target="_blank"
+              >
+                Linkedin
+              </a>
+            )}
+
+            {professor?.lattes && (
+              <a
+                className="border-2 border-gray700 text-gray600 text-base font-semibold px-4 py-2 rounded-3xl"
+                href={professor?.lattes}
+                target="_blank"
+              >
+                LATTES
+              </a>
+            )}
           </div>
         </div>
       </div>

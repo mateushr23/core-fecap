@@ -18,13 +18,22 @@ export function Footer() {
           </p>
           <p className="font-bold text-base text-white mb-4">Nos siga em</p>
           <div className="flex gap-2">
-            <a href="https://www.facebook.com.br/" target="_blank">
+            <a
+              href="https://www.facebook.com/coreescoladenegocios"
+              target="_blank"
+            >
               <img className="" src={facebook} alt="Ícone do Facebook" />
             </a>
-            <a href="https://www.instagram.com.br/" target="_blank">
+            <a
+              href="https://www.instagram.com/coreescoladenegocios/"
+              target="_blank"
+            >
               <img src={instagram} alt="Ícone do Instagram" />
             </a>
-            <a href="https://www.linkedin.com.br/" target="_blank">
+            <a
+              href="https://www.linkedin.com/company/core-escola-de-neg%C3%B3cios"
+              target="_blank"
+            >
               <img src={linkedin} alt="Ícone do LinkedIn" />
             </a>
           </div>
@@ -97,7 +106,7 @@ export function Footer() {
         </div>
       </div>
       <footer className="bg-white100 h-[85px] font-inter text-base text-blue300 text-center justify-center flex items-center">
-        2024 - CORE ESCOLA DE NEGÓCIOS - Todos direitos reservados | Política de
+        2025 - CORE ESCOLA DE NEGÓCIOS - Todos direitos reservados | Política de
         Privacidade
       </footer>
     </div>

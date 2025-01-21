@@ -15,7 +15,7 @@ export function BannerEscola() {
             VIVA UMA EXPERIÊNCIA TRANSFORMADORA
           </h1>
           <h2 className="text-green200 font-bold text-4xl mb-6 mt-2">
-            COM A INOVAÇÃO ESTRATÉGICA
+            COM EXCELÊNCIA, INOVAÇÃO E RESULTADOS
           </h2>
           <p className="text-white text-xl mb-8">
             A CORE é uma empresa jovem e moderna, dedicada a proporcionar aos

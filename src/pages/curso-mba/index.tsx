@@ -13,52 +13,52 @@ import { useParams } from "react-router-dom"
 import { cursoData } from "../../assets/cursos"
 import { Professor } from "../../components/professor"
 
-const revertSlug = (slug: string) => slug.replace(/-/g, " ").toLowerCase()
-
 export function CursoMba() {
   const { id } = useParams<{ id: string }>()
-  const nome = revertSlug(id || "") // Reverte o slug
 
-  const curso = cursoData.find(
-    (curso) => curso.categoria === "mba" && curso.nome.toLowerCase() === nome
-  )
+  const curso = cursoData.find((curso) => curso.id === id) // Busca pelo ID diretamente
 
   return (
     <div>
-      <img className="w-full" src={banner} alt="Banner curso curta duracao" />
+      <div className="relative w-full">
+        <img className="w-full" src={banner} alt="Banner curso mba" />
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white font-bold text-4xl text-center">
+          {curso?.nome.toUpperCase()}
+        </div>
+      </div>
       <div className="flex">
-        <div className="w-[50%] h-[920px] bg-white300 flex flex-col items-center text-center">
-          <div className="w-[570px]">
-            <h1 className="text-blue300 font-bold text-3xl text-start mt-28">
+        <div className="w-[50%] h-[920px] bg-white300 flex flex-col items-center justify-center text-center">
+          <div className="w-[700px]">
+            <h1 className="text-blue300 font-bold text-3xl text-start">
               Sobre o Curso
             </h1>
-            <p className="text-blue300 text-xl text-justify mt-8">
+            <p className="text-blue300 text-xl text-justify mt-4">
               {curso?.sobre}
             </p>
-            <h1 className="text-blue300 font-bold text-3xl text-start mt-16">
+            <h1 className="text-blue300 font-bold text-3xl text-start mt-4">
               Para quem é este curso?
             </h1>
-            <p className="text-blue300 text-xl text-justify mt-8">
+            <p className="text-blue300 text-xl text-justify mt-4">
               {curso?.paraQuem}
             </p>
           </div>
         </div>
-        <div className="bg-black200 flex-grow">
+        <div className="bg-black200 flex-grow flex flex-col justify-center">
           <div className="flex flex-col mt-28 ml-28 gap-16">
             <div className="flex gap-8">
               <img src={relogio} />
               <div className="ml-2">
                 <h2 className="text-xl text-white">Carga horária</h2>
-                <h3 className="text-2xl text-white font-bold">16 horas</h3>
+                <h3 className="text-2xl text-white font-bold">
+                  {curso?.carga}
+                </h3>
               </div>
             </div>
             <div className="flex gap-8">
               <img src={calendario} />
               <div>
                 <h2 className="text-xl text-white">Data do Curso</h2>
-                <h3 className="text-2xl text-white font-bold">
-                  De 10 a 11 de Março de 2025
-                </h3>
+                <h3 className="text-2xl text-white font-bold">{curso?.data}</h3>
               </div>
             </div>
             <div className="flex gap-8">
@@ -80,18 +80,14 @@ export function CursoMba() {
               </div>
             </div>
           </div>
-          <button className="mt-20 ml-28 bg-black200 text-green200 border border-green200 text-xl font-bold px-11 py-4 rounded-2xl">
+          <button className="mt-20 ml-28 w-[280px] bg-black200 text-green200 border border-green200 text-xl font-bold py-4 rounded-2xl">
             INSCREVA-SE
           </button>
         </div>
       </div>
       <Diferenciais />
       <div className="h-[1200px] bg-black100 flex flex-col items-center">
-        <h1 className="font-bold text-white bg-green200 w-[560px] py-4 text-3xl text-center mt-52 mb-24">
-          COORDENAÇÃO DO CURSO
-        </h1>
-
-        <Professor variant="jose" />
+        <Professor variant={curso?.variant} />
       </div>
       <Qualidade />
       <div className="h-[650px] bg-black100 flex flex-col items-center ">

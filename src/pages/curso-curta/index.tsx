@@ -40,18 +40,24 @@ export function CursoCurta() {
         </div>
       </div>
       <div className="flex">
-        <div className="w-[50%] h-[920px] bg-white300 flex flex-col items-center text-center">
-          <div className="w-[570px]">
-            <h1 className="text-blue300 font-bold text-3xl text-start mt-28">
+        <div className="w-[50%] h-[920px] bg-white300 flex flex-col items-center justify-center text-center ">
+          <div className="w-[700px]">
+            <h1 className="text-blue300 font-bold text-3xl text-start">
               Sobre o Curso
             </h1>
-            <p className="text-blue300 text-xl text-justify mt-8">
+            <p className="text-blue300 text-xl text-justify mt-4">
               {curso?.sobre}
             </p>
-            <h1 className="text-blue300 font-bold text-3xl text-start mt-16">
-              Para quem é este curso?
+            <h1 className="text-blue300 font-bold text-3xl text-start mt-4">
+              O que você leva do Curso
             </h1>
-            <p className="text-blue300 text-xl text-justify mt-8 whitespace-pre-line">
+            <p className="text-blue300 text-xl text-justify mt-4 whitespace-pre-line">
+              {curso?.oQueLeva}
+            </p>
+            <h1 className="text-blue300 font-bold text-3xl text-start mt-4">
+              Para quem é este Curso
+            </h1>
+            <p className="text-blue300 text-xl text-justify mt-4 whitespace-pre-line">
               {curso?.paraQuem}
             </p>
           </div>
@@ -70,16 +76,16 @@ export function CursoCurta() {
             <div className="flex gap-8">
               <img src={calendario} />
               <div className="ml-2">
-                <h2 className="text-xl text-white">Data do Curso</h2>
+                <h2 className="text-xl text-white">Dias e horários</h2>
                 <h3 className="text-2xl text-white font-bold">{curso?.data}</h3>
               </div>
             </div>
             <div className="flex gap-8">
               <img src={pin} />
               <div className="ml-8">
-                <h2 className="text-xl text-white">Localização</h2>
+                <h2 className="text-xl text-white">Modalidade</h2>
                 <h3 className="text-2xl text-white font-bold">
-                  Online e presencial (Híbrido)
+                  {curso?.modalidade}
                 </h3>
               </div>
             </div>
@@ -97,12 +103,12 @@ export function CursoCurta() {
               <div className="ml-3">
                 <h2 className="text-xl text-white">Período de Inscrição</h2>
                 <h3 className="text-2xl text-white font-bold">
-                  até 10 de Fevereiro de 2025
+                  {curso?.inscricao}
                 </h3>
               </div>
             </div>
           </div>
-          <button className="mt-20 ml-28 bg-blue300 text-green200 border border-green200 text-xl font-bold px-11 py-4 rounded-2xl">
+          <button className="mt-20 ml-28 w-[280px] bg-blue300 text-green200 border border-green200 text-xl font-bold  py-4 rounded-2xl">
             INSCREVA-SE
           </button>
         </div>
@@ -113,7 +119,7 @@ export function CursoCurta() {
             MÓDULOS DO CURSO
           </h1>
           <div className="flex flex-col gap-2 w-[1100px]">
-            {curso?.modulos.map((modulo, index) => (
+            {curso?.modulos?.map((modulo, index) => (
               <div
                 key={index}
                 className={`border-2 border-green200 py-6 px-12 overflow-hidden transition-all duration-300 ${
@@ -151,7 +157,6 @@ export function CursoCurta() {
         </div>
       </div>
       <Professor variant={curso?.variant} />
-   
       <Pagamentos />
       <div className="h-[650px] bg-white300 flex flex-col items-center ">
         <h1 className="font-bold text-4xl bg-green200 p-4 text-white mt-52">
