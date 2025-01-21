@@ -9,14 +9,24 @@ import escrita from "../../assets/images/escrita.png"
 import banner from "../../assets/images/banner-curso-mba.png"
 import { Diferenciais } from "../../components/diferenciais"
 import { Qualidade } from "../../components/qualidade"
-import { useParams } from "react-router-dom"
+import { useNavigate, useParams } from "react-router-dom"
 import { cursoData } from "../../assets/cursos"
 import { Professor } from "../../components/professor"
+import { useEffect } from "react"
 
 export function CursoMba() {
   const { id } = useParams<{ id: string }>()
+  const navigate = useNavigate()
 
-  const curso = cursoData.find((curso) => curso.id === id) // Busca pelo ID diretamente
+  const curso = cursoData.find(
+    (curso) => curso.id === id && curso.categoria === "mba"
+  )
+
+  useEffect(() => {
+    if (!curso) {
+      navigate("/mba", { replace: true })
+    }
+  }, [curso, navigate])
 
   return (
     <div>
@@ -80,7 +90,7 @@ export function CursoMba() {
               </div>
             </div>
           </div>
-          <button className="mt-20 ml-28 w-[280px] bg-black200 text-green200 border border-green200 text-xl font-bold py-4 rounded-2xl">
+          <button className="mt-20 ml-28 w-[280px] bg-black200 text-green200 border border-green200 hover:bg-green200 hover:text-black200 transition delay-80 text-xl font-bold py-4 rounded-2xl">
             INSCREVA-SE
           </button>
         </div>
@@ -103,7 +113,7 @@ export function CursoMba() {
         <p className="text-xl text-white mt-2">
           Inscreva-se já com o cupom da Core e adquira seu MBA com facilidade.
         </p>
-        <button className="border border-green200 font-bold text-xl bg-black100 px-6 py-4 rounded-2xl text-green200 mt-14">
+        <button className="border border-green200 font-bold text-xl bg-black100 px-6 py-4 rounded-2xl text-green200 hover:bg-green200 hover:text-black100 transition delay-80 mt-14">
           INSCREVA-SE
         </button>
       </div>

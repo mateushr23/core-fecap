@@ -93,16 +93,22 @@ export function CurtaDuracao() {
             POR CATEGORIA
           </h1>
           <div className="flex mt-32 gap-16">
-            <button className="border border-brown100 text-brown100 px-20 py-4 text-2xl">
+            <button
+              className="border border-blue100 text-blue100 hover:bg-blue100 hover:text-white100 transition delay-80
+            px-20 py-4 text-2xl"
+            >
+              TODOS
+            </button>
+            <button
+              className="border border-brown100 text-brown100 hover:bg-brown100 hover:text-white100 transition delay-80 
+            px-20 py-4 text-2xl"
+            >
               AGRO
             </button>
-            <button className="border border-red100 text-red100 px-20 py-4 text-2xl">
-              BUSINESS
-            </button>
-            <button className="border border-blue100 text-blue100 px-20 py-4 text-2xl">
-              LIDERANÇA
-            </button>
-            <button className="border border-green200 text-green200 px-20 py-4 text-2xl">
+            <button
+              className="border border-green200 text-green200 hover:bg-green200 hover:text-white100 transition delay-80
+            px-20 py-4 text-2xl"
+            >
               GESTÃO
             </button>
           </div>

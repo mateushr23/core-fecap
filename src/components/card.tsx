@@ -22,10 +22,12 @@ export function Card() {
           resultados.
         </p>
         <div className="mt-4 flex justify-between mb-8">
-          <button className="border border-green200 rounded-2xl font-bold px-4 py-2 text-green200">
+          <button className="border border-green200 rounded-2xl font-bold px-4 py-2 text-green200 hover:bg-green200 hover:text-white transition delay-80">
             INSCREVA-SE
           </button>
-          <button className="text-gray300 underline">SAIBA MAIS</button>
+          <button className="text-gray300 underline hover:font-semibold transition delay-80">
+            SAIBA MAIS
+          </button>
         </div>
       </div>
     </div>

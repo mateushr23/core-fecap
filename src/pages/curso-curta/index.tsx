@@ -11,16 +11,25 @@ import escrita from "../../assets/images/escrita.png"
 import banner from "../../assets/images/banner-curso-curta.png"
 import downArrow from "../../assets/images/down-arrow.png"
 import upperArrow from "../../assets/images/upper-arrow.png"
-import { useState } from "react"
-import { useParams } from "react-router-dom"
+import { useEffect, useState } from "react"
+import { useNavigate, useParams } from "react-router-dom"
 import { cursoData } from "../../assets/cursos"
 import { Professor } from "../../components/professor"
 
 export function CursoCurta() {
   const [openModules, setOpenModules] = useState<string[]>([])
   const { id } = useParams<{ id: string }>()
+  const navigate = useNavigate()
 
-  const curso = cursoData.find((curso) => curso.id === id) // Busca pelo ID diretamente
+  const curso = cursoData.find(
+    (curso) => curso.id === id && curso.categoria === "curta"
+  )
+
+  useEffect(() => {
+    if (!curso) {
+      navigate("/curta-duracao", { replace: true })
+    }
+  }, [curso, navigate])
 
   const toggleModule = (index: string) => {
     setOpenModules(
@@ -108,7 +117,7 @@ export function CursoCurta() {
               </div>
             </div>
           </div>
-          <button className="mt-20 ml-28 w-[280px] bg-blue300 text-green200 border border-green200 text-xl font-bold  py-4 rounded-2xl">
+          <button className="mt-20 ml-28 w-[280px] bg-blue300 text-green200 border border-green200 hover:bg-green200 hover:text-blue300 transition delay-80 text-xl font-bold  py-4 rounded-2xl">
             INSCREVA-SE
           </button>
         </div>
@@ -168,7 +177,7 @@ export function CursoCurta() {
           precisar.
         </p>
 
-        <button className="border border-green200 font-bold text-xl bg-white300 px-8 py-3 rounded-2xl text-green200 mt-16">
+        <button className="border border-green200 hover:bg-green200 hover:text-white300 transition delay-80 font-bold text-xl bg-white300 px-8 py-3 rounded-2xl text-green200 mt-16">
           INSCREVA-SE
         </button>
       </div>

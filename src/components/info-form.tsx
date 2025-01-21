@@ -57,7 +57,7 @@ export function InfoForm() {
             existente nas mensagens encaminhadas por nós. Para mais informações,
             acesse nossos avisos de privacidade
           </p>
-          <button className="bg-green200 py-5 px-10 rounded-2xl text-white font-bold text-2xl">
+          <button className="bg-green200 hover:bg-green100 transition delay-80 py-5 px-10 rounded-2xl text-white font-bold text-2xl">
             Enviar
           </button>
         </form>

@@ -59,7 +59,7 @@ export function Header() {
         <div className="flex gap-4">
           <button
             className="flex h-[50px] gap-1 border-2 rounded-full border-green200 text-sm 
-          items-center p-4 font-semibold text-green200 "
+          items-center p-4 font-semibold text-green200"
           >
             <img src={whatsapp} alt="Ícone do WhatsApp" />
             FALE CONOSCO
