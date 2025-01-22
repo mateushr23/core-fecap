@@ -6,6 +6,8 @@ export function InfoForm() {
   const [nome, setNome] = useState("")
   const [email, setEmail] = useState("")
   const [celular, setCelular] = useState("")
+  const [empresa, setEmpresa] = useState("")
+  const [cargo, setCargo] = useState("")
   const [oQueDeseja, setOqueDeseja] = useState("")
   const [enviado, setEnviado] = useState(false)
 
@@ -105,6 +107,24 @@ export function InfoForm() {
                 const target = e.target as HTMLInputElement
                 target.value = target.value.replace(/[^0-9]/g, "") // Apenas números
               }}
+              required
+            />
+            <input
+              name="empresa"
+              className="border border-gray400 rounded-lg p-3 font-semibold text-base"
+              type="text"
+              placeholder="Empresa"
+              value={empresa}
+              onChange={(e) => setEmpresa(e.target.value)}
+              required
+            />
+            <input
+              name="cargo"
+              className="border border-gray400 rounded-lg p-3 font-semibold text-base"
+              type="text"
+              placeholder="Cargo"
+              value={cargo}
+              onChange={(e) => setCargo(e.target.value)}
               required
             />
             <input
