@@ -91,10 +91,10 @@ export function Tecnicos() {
           </div>
         </div>
       </div>
-      <div className="h-[720px] bg-blue400 flex flex-col">
+      <div className="relative flex flex-col">
         <img className="w-full" src={bannerAdm} />
-        <div className="flex text-white gap-72">
-          <div className="w-[880px] ml-32 text-justify hyphens-auto text-white -mt-20">
+        <div className="absolute inset-0 flex items-center text-white gap-72">
+          <div className="w-[880px] ml-32 text-justify hyphens-auto text-white">
             <h1 className="font-bold text-4xl ">
               CURSOS DE EXATAS E ADM NO MERCADO
             </h1>
@@ -115,7 +115,7 @@ export function Tecnicos() {
             </p>
           </div>
           <div className="items-center flex flex-col">
-            <h1 className="font-bold text-4xl -mt-20 w-[310px] text-center">
+            <h1 className="font-bold text-4xl w-[310px] text-center">
               PROFISSIONAL NO MERCADO
             </h1>
             <div className="bg-green200 rounded-3xl text-center mt-2 py-8 w-[420px] flex flex-col gap-2">

@@ -1,7 +1,19 @@
+import cardGestao1 from "../assets/images/cardGestao1.png"
+import cardGestao2 from "../assets/images/cardGestao2.png"
+import cardGestao3 from "../assets/images/cardGestao3.png"
+import bannerCurta1 from "../assets/images/bannerCurta1.png"
+import bannerCurta2 from "../assets/images/bannerCurta2.png"
+import bannerCurta3 from "../assets/images/bannerCurta3.png"
+
 export interface Data {
   id: string
+  banner?: string
   categoriaCurta?: string
-  descricaoCard?: string
+  cardImg?: string
+  cardDescricao?: string
+  cardTag1?: string
+  cardTag2?: string
+  cardTag3?: string
   variant: string
   categoria: string
   nome: string
@@ -22,8 +34,14 @@ export const cursoData: Data[] = [
   // CURSOS CURTA DURACAO -----------------------------------------------------------------------------------------------
   {
     id: "1",
+    banner: bannerCurta1,
     categoriaCurta: "gestao",
-    descricaoCard: "teste",
+    cardImg: cardGestao1,
+    cardDescricao:
+      "Este curso foi desenvolvido para profissionais em início de carreira que buscam crescimento rápido e sólido no mundo corporativo. Ele apresenta as principais ferramentas de g",
+    cardTag1: "CURTA-DURAÇÃO",
+    cardTag2: "EAD",
+    cardTag3: "GESTÃO",
     variant: "renato",
     categoria: "curta",
     nome: "Ferramentas e Estratégias Essenciais para Iniciar Sua Jornada no Mundo Corporativo",
@@ -79,8 +97,14 @@ export const cursoData: Data[] = [
   },
   {
     id: "2",
+    banner: bannerCurta2,
     categoriaCurta: "gestao",
-    descricaoCard: "teste 2",
+    cardImg: cardGestao2,
+    cardDescricao:
+      "Este curso foi desenvolvido para profissionais em início de carreira que buscam crescimento rápido e sólido no mundo corporativo. Ele apresenta as principais ferramentas de g",
+    cardTag1: "CURTA-DURAÇÃO",
+    cardTag2: "EAD",
+    cardTag3: "GESTÃO",
     variant: "renato",
     categoria: "curta",
     nome: "Formação em Logística: Do Abastecimento à Distribuição",
@@ -134,8 +158,13 @@ export const cursoData: Data[] = [
   },
   {
     id: "3",
+    banner: bannerCurta3,
     categoriaCurta: "gestao",
-    descricaoCard: "teste 3",
+    cardImg: cardGestao3,
+    cardDescricao: "teste",
+    cardTag1: "CURTA-DURAÇÃO",
+    cardTag2: "EAD",
+    cardTag3: "GESTÃO",
     variant: "carminha",
     categoria: "curta",
     nome: "Gestão de Pequenos Negócios: Empreendedorismo e Resultados",
@@ -203,8 +232,13 @@ export const cursoData: Data[] = [
   },
   {
     id: "4",
+    banner: bannerCurta1,
     categoriaCurta: "gestao",
-    descricaoCard: "teste 4",
+    cardImg: cardGestao1,
+    cardDescricao: "teste",
+    cardTag1: "CURTA-DURAÇÃO",
+    cardTag2: "EAD",
+    cardTag3: "GESTÃO",
     variant: "carminha",
     categoria: "curta",
     nome: "Gestão de Vendas e Negociação com Clientes e Fornecedores",
@@ -263,8 +297,13 @@ export const cursoData: Data[] = [
   },
   {
     id: "5",
+    banner: bannerCurta2,
     categoriaCurta: "gestao",
-    descricaoCard: "teste 5",
+    cardImg: cardGestao2,
+    cardDescricao: "teste",
+    cardTag1: "CURTA-DURAÇÃO",
+    cardTag2: "EAD",
+    cardTag3: "GESTÃO",
     variant: "luciane",
     categoria: "curta",
     nome: "Gestão de Conflitos",
@@ -328,8 +367,13 @@ export const cursoData: Data[] = [
   },
   {
     id: "6",
+    banner: bannerCurta3,
     categoriaCurta: "gestao",
-    descricaoCard: "teste 6",
+    cardImg: cardGestao3,
+    cardDescricao: "teste",
+    cardTag1: "CURTA-DURAÇÃO",
+    cardTag2: "EAD",
+    cardTag3: "GESTÃO",
     variant: "maria",
     categoria: "curta",
     nome: "Analista de Cargos e Salários",
@@ -389,8 +433,13 @@ export const cursoData: Data[] = [
   },
   {
     id: "7",
+    banner: bannerCurta1,
     categoriaCurta: "gestao",
-    descricaoCard: "teste 7",
+    cardImg: cardGestao1,
+    cardDescricao: "teste",
+    cardTag1: "CURTA-DURAÇÃO",
+    cardTag2: "EAD",
+    cardTag3: "GESTÃO",
     variant: "maria",
     categoria: "curta",
     nome: "Analista de Gente e Cultura",
@@ -450,8 +499,13 @@ export const cursoData: Data[] = [
   },
   {
     id: "8",
+    banner: bannerCurta2,
     categoriaCurta: "gestao",
-    descricaoCard: "teste 8",
+    cardImg: cardGestao2,
+    cardDescricao: "teste",
+    cardTag1: "CURTA-DURAÇÃO",
+    cardTag2: "EAD",
+    cardTag3: "GESTÃO",
     variant: "maria",
     categoria: "curta",
     nome: "Analista de Treinamento & Desenvolvimento",
@@ -510,8 +564,13 @@ export const cursoData: Data[] = [
   },
   {
     id: "9",
+    banner: bannerCurta3,
     categoriaCurta: "gestao",
-    descricaoCard: "teste 9",
+    cardImg: cardGestao3,
+    cardDescricao: "teste",
+    cardTag1: "CURTA-DURAÇÃO",
+    cardTag2: "EAD",
+    cardTag3: "GESTÃO",
     variant: "maria",
     categoria: "curta",
     nome: "Qualidade no Atendimento: Excelência, Inovação e Resultados",
@@ -570,8 +629,13 @@ export const cursoData: Data[] = [
   },
   {
     id: "10",
+    banner: bannerCurta1,
     categoriaCurta: "gestao",
-    descricaoCard: "teste 10",
+    cardImg: cardGestao1,
+    cardDescricao: "teste",
+    cardTag1: "CURTA-DURAÇÃO",
+    cardTag2: "EAD",
+    cardTag3: "GESTÃO",
     variant: "maria",
     categoria: "curta",
     nome: "Gestão de Riscos Psicossociais e Conformidade com a NR-1",
@@ -633,8 +697,13 @@ export const cursoData: Data[] = [
   },
   {
     id: "11",
+    banner: bannerCurta2,
     categoriaCurta: "gestao",
-    descricaoCard: "teste 11",
+    cardImg: cardGestao2,
+    cardDescricao: "teste",
+    cardTag1: "CURTA-DURAÇÃO",
+    cardTag2: "EAD",
+    cardTag3: "GESTÃO",
     variant: "maria",
     categoria: "curta",
     nome: "Analista de Recrutamento e Seleção",
@@ -693,8 +762,13 @@ export const cursoData: Data[] = [
   },
   {
     id: "12",
+    banner: bannerCurta3,
     categoriaCurta: "gestao",
-    descricaoCard: "teste 12",
+    cardImg: cardGestao3,
+    cardDescricao: "teste",
+    cardTag1: "CURTA-DURAÇÃO",
+    cardTag2: "EAD",
+    cardTag3: "GESTÃO",
     variant: "regina",
     categoria: "curta",
     nome: "Liderança em Ação",

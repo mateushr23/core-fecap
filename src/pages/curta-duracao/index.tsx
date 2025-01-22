@@ -120,7 +120,11 @@ export function CurtaDuracao() {
               <Card
                 key={curso.id}
                 nome={curso.nome}
-                descricao={curso.descricaoCard}
+                cardDescricao={curso.cardDescricao}
+                cardImg={curso.cardImg}
+                cardTag1={curso.cardTag1}
+                cardTag2={curso.cardTag2}
+                cardTag3={curso.cardTag3}
               />
             ))}
           </div>
@@ -176,7 +180,11 @@ export function CurtaDuracao() {
                       <Card
                         key={curso.id}
                         nome={curso.nome}
-                        descricao={curso.descricaoCard}
+                        cardDescricao={curso.cardDescricao}
+                        cardImg={curso.cardImg}
+                        cardTag1={curso.cardTag1}
+                        cardTag2={curso.cardTag2}
+                        cardTag3={curso.cardTag3}
                       />
                     ))}
                   <button
@@ -195,7 +203,6 @@ export function CurtaDuracao() {
           </div>
         </div>
       </div>
-
       <Parceiros />
       <InCompany />
       <BannerEscola />

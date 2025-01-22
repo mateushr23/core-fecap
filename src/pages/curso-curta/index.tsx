@@ -8,7 +8,6 @@ import calendario from "../../assets/images/calendario.png"
 import pin from "../../assets/images/pin.png"
 import dinheiro from "../../assets/images/dinheiro.png"
 import escrita from "../../assets/images/escrita.png"
-import banner from "../../assets/images/banner-curso-curta.png"
 import downArrow from "../../assets/images/down-arrow.png"
 import upperArrow from "../../assets/images/upper-arrow.png"
 import { useEffect, useState } from "react"
@@ -43,7 +42,11 @@ export function CursoCurta() {
   return (
     <div>
       <div className="relative w-full">
-        <img className="w-full" src={banner} alt="Banner curso curta duracao" />
+        <img
+          className="w-full"
+          src={curso?.banner}
+          alt="Banner curso curta duracao"
+        />
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white font-bold text-4xl text-center">
           {curso?.nome.toUpperCase()}
         </div>

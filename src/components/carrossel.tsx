@@ -2,12 +2,11 @@ import { useState, useEffect } from "react"
 import carrossel1 from "../assets/images/carrossel1.png"
 import carrossel2 from "../assets/images/carrossel2.png"
 import carrossel3 from "../assets/images/carrossel3.png"
-import carrossel4 from "../assets/images/carrossel4.png"
 import leftArrow from "../assets/images/left-arrow.png"
 import rightArrow from "../assets/images/right-arrow.png"
 
 export function Carrossel() {
-  const images = [carrossel1, carrossel2, carrossel3, carrossel4]
+  const images = [carrossel1, carrossel2, carrossel3]
   const [currentIndex, setCurrentIndex] = useState(0)
 
   // Função para avançar para a próxima imagem

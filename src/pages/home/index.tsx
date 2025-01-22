@@ -18,6 +18,10 @@ export function Home() {
   const [filteredCursos, setFilteredCursos] = useState<Data[]>([])
   const navigate = useNavigate()
 
+  const specificCursos = cursoData.filter(
+    (curso) => curso.id === "1" || curso.id === "2" || curso.id === "3"
+  )
+
   const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value
     setSearchTerm(value)
@@ -168,9 +172,17 @@ export function Home() {
           VÃO TE ALAVANCAR NO MERCADO DE TRABALHO!
         </h2>
         <div className="flex gap-7 mt-20">
-          <Card />
-          <Card />
-          <Card />
+          {specificCursos.map((curso) => (
+            <Card
+              key={curso.id}
+              nome={curso.nome}
+              cardDescricao={curso.cardDescricao}
+              cardImg={curso.cardImg}
+              cardTag1={curso.cardTag1}
+              cardTag2={curso.cardTag2}
+              cardTag3={curso.cardTag3}
+            />
+          ))}
         </div>
         <Link
           to={"/curta-duracao"}
