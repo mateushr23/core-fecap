@@ -4,8 +4,18 @@ import linkedin from "../assets/images/linkedin.png"
 import logo from "../assets/images/core-fecap-logo.png"
 import whatsapp from "../assets/images/whatsapp.png"
 import { Link } from "react-router-dom"
+import { whatsappConfig } from "../assets/whatsapp-config"
 
 export function Header() {
+  const handleWhatsappRedirect = (): void => {
+    const phoneNumber = whatsappConfig.phoneNumber.replace(/\D/g, "") // Remove caracteres não numéricos
+    const message = encodeURIComponent(
+      `Olá, gostaria de mais informações sobre os cursos.`
+    )
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`
+    window.open(whatsappUrl, "_blank")
+  }
+
   return (
     <div className="flex flex-col">
       <div className="bg-blue300 h-[85px] flex justify-between items-center text-white px-32">
@@ -58,6 +68,7 @@ export function Header() {
         </div>
         <div className="flex gap-4">
           <button
+            onClick={handleWhatsappRedirect}
             className="flex h-[50px] gap-1 border-2 rounded-full border-green200 text-sm 
           items-center p-4 font-semibold text-green200"
           >

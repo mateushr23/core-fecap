@@ -23,7 +23,7 @@ export function BannerEscola() {
             mercado.
           </p>
           <Link
-            to={"/"}
+            to={"/institucional"}
             onClick={() => window.scrollTo(0, 0)}
             className="border-2 border-green200 py-3 px-6 text-green200 font-bold rounded-2xl"
           >

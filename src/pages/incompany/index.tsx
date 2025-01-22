@@ -7,8 +7,18 @@ import bannerC5 from "../../assets/images/banner-c5.png"
 import { BannerEscola } from "../../components/banner-escola"
 import agronecociosBg from "../../assets/images/agronegocios-background.png"
 import gestaoBg from "../../assets/images/gestao-background.png"
+import { whatsappConfig } from "../../assets/whatsapp-config"
 
 export function InCompany() {
+  const handleWhatsappRedirect = (): void => {
+    const phoneNumber = whatsappConfig.phoneNumber.replace(/\D/g, "")
+    const message = encodeURIComponent(
+      `Olá, gostaria de saber mais sobre o In-Company!`
+    )
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`
+    window.open(whatsappUrl, "_blank")
+  }
+
   return (
     <div>
       <div className="relative">
@@ -32,7 +42,10 @@ export function InCompany() {
               resultados esperados.
             </p>
           </div>
-          <button className="border-2 border-green200 rounded-xl w-[250px] items-center flex justify-center gap-4 p-3 text-green200 font-bold text-base mt-16">
+          <button
+            onClick={handleWhatsappRedirect}
+            className="border-2 border-green200 rounded-xl w-[250px] items-center flex justify-center gap-4 p-3 text-green200 font-bold text-base mt-16"
+          >
             <img src={whatsapp} />
             Enviar Whatsapp
           </button>
@@ -227,7 +240,10 @@ export function InCompany() {
             <span className="font-bold"> organização</span> e impulsione os
             resultados do seu negócio.
           </p>
-          <button className="relative top-40 border-2 border-green200 rounded-xl w-[250px] items-center flex justify-center gap-4 p-3 text-green200 font-bold text-base">
+          <button
+            onClick={handleWhatsappRedirect}
+            className="relative top-40 border-2 border-green200 rounded-xl w-[250px] items-center flex justify-center gap-4 p-3 text-green200 font-bold text-base"
+          >
             <img src={whatsapp} />
             Enviar Whatsapp
           </button>

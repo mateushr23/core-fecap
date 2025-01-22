@@ -181,6 +181,8 @@ export function Home() {
               cardTag1={curso.cardTag1}
               cardTag2={curso.cardTag2}
               cardTag3={curso.cardTag3}
+              categoria={curso.categoria}
+              cursoId={curso.id}
             />
           ))}
         </div>

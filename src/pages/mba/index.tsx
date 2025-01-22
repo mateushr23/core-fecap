@@ -62,7 +62,13 @@ export function Mba() {
                       <Card
                         key={curso.id}
                         nome={curso.nome}
-                        descricao={curso.descricaoCard}
+                        cardDescricao={curso.cardDescricao}
+                        categoria={curso.categoria}
+                        cursoId={curso.id}
+                        cardImg={curso.cardImg}
+                        cardTag1={curso.cardTag1}
+                        cardTag2={curso.cardTag2}
+                        cardTag3={curso.cardTag3}
                       />
                     ))}
                   <button

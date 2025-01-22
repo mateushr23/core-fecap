@@ -28,6 +28,14 @@ export function CursoMba() {
     }
   }, [curso, navigate])
 
+  const handleInscrevaseCurso = () => {
+    if (curso) window.open(curso.mbaLink, "_blank")
+  }
+
+  const handleInscrevaseMba = () => {
+    if (curso) window.open("https://www.fecap.br/mba/", "_blank")
+  }
+
   return (
     <div>
       <div className="relative w-full">
@@ -90,7 +98,10 @@ export function CursoMba() {
               </div>
             </div>
           </div>
-          <button className="mt-20 ml-28 w-[280px] bg-black200 text-green200 border border-green200 hover:bg-green200 hover:text-black200 transition delay-80 text-xl font-bold py-4 rounded-2xl">
+          <button
+            onClick={handleInscrevaseCurso}
+            className="mt-20 ml-28 w-[280px] bg-black200 text-green200 border border-green200 hover:bg-green200 hover:text-black200 transition delay-80 text-xl font-bold py-4 rounded-2xl"
+          >
             INSCREVA-SE
           </button>
         </div>
@@ -108,12 +119,15 @@ export function CursoMba() {
           Todo curso de MBA pela Core e FECAP tem
         </p>
         <h2 className="text-4xl text-green200 font-bold mt-2">
-          15% DE DESCONTO
+          20% DE DESCONTO
         </h2>
         <p className="text-xl text-white mt-2">
           Inscreva-se já com o cupom da Core e adquira seu MBA com facilidade.
         </p>
-        <button className="border border-green200 font-bold text-xl bg-black100 px-6 py-4 rounded-2xl text-green200 hover:bg-green200 hover:text-black100 transition delay-80 mt-14">
+        <button
+          onClick={handleInscrevaseMba}
+          className="border border-green200 font-bold text-xl bg-black100 px-6 py-4 rounded-2xl text-green200 hover:bg-green200 hover:text-black100 transition delay-80 mt-14"
+        >
           INSCREVA-SE
         </button>
       </div>

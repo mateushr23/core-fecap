@@ -125,6 +125,8 @@ export function CurtaDuracao() {
                 cardTag1={curso.cardTag1}
                 cardTag2={curso.cardTag2}
                 cardTag3={curso.cardTag3}
+                cursoId={curso.id}
+                categoria={curso.categoria}
               />
             ))}
           </div>
@@ -185,6 +187,8 @@ export function CurtaDuracao() {
                         cardTag1={curso.cardTag1}
                         cardTag2={curso.cardTag2}
                         cardTag3={curso.cardTag3}
+                        cursoId={curso.id}
+                        categoria={curso.categoria}
                       />
                     ))}
                   <button

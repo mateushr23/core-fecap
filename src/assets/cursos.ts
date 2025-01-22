@@ -14,6 +14,7 @@ export interface Data {
   cardTag1?: string
   cardTag2?: string
   cardTag3?: string
+  mbaLink?: string
   variant: string
   categoria: string
   nome: string
@@ -850,6 +851,11 @@ export const cursoData: Data[] = [
   {
     id: "13",
     variant: "ademar",
+    mbaLink: "https://www.fecap.br/mba/mba-accounting/",
+    cardImg: cardGestao1,
+    cardDescricao:
+      "O MBA Accounting da FECAP desenvolve habilidades de liderança nas áreas contábil e financeira, com uma matriz curricular flexível. Oferece condições especiais e conclusão acelerada para formados em áreas específicas pela FECAP.",
+    cardTag1: "MBA",
     categoria: "mba",
     nome: "MBA ACCOUNTING",
     carga: "480 horas",
@@ -862,6 +868,11 @@ export const cursoData: Data[] = [
   {
     id: "14",
     variant: "jose",
+    mbaLink: "https://www.fecap.br/mba/mba-em-agribusiness-marketing-commerce/",
+    cardImg: cardGestao2,
+    cardDescricao:
+      "O MBA em Agribusiness é voltado para empreendedores e profissionais de diversas áreas, com foco na gestão do agronegócio, abordando comércio de alimentos, fibras, agroenergia e biocomércio.",
+    cardTag1: "MBA",
     categoria: "mba",
     nome: "MBA em Agribusiness, Marketing & Commerce",
     carga: "380 horas",
@@ -874,6 +885,11 @@ export const cursoData: Data[] = [
   {
     id: "15",
     variant: "roberto",
+    mbaLink: "https://www.fecap.br/mba/mba-em-gestao-de-negocios/",
+    cardImg: cardGestao3,
+    cardDescricao:
+      "O MBA em Gestão de Negócios prepara alunos para cargos de gestão e direção, com ênfase em práticas empresariais. É ideal para quem busca empreender ou qualificar sua carreira em administração, com certificação da ANAMBA.",
+    cardTag1: "MBA",
     categoria: "mba",
     nome: "MBA em Gestão de Negócios",
     carga: "480 horas",
@@ -886,6 +902,11 @@ export const cursoData: Data[] = [
   {
     id: "16",
     variant: "sergio",
+    mbaLink: "https://www.fecap.br/mba/mba-em-gestao-de-riscos-e-compliance/",
+    cardImg: cardGestao1,
+    cardDescricao:
+      "O MBA em Gestão de Riscos e Compliance oferece conhecimentos em gestão de riscos, controles internos e compliance, proporcionando uma formação sólida e multidisciplinar para os alunos.",
+    cardTag1: "MBA",
     categoria: "mba",
     nome: "MBA em Gestão de Riscos e Compliance",
     carga: "480 horas",
@@ -898,6 +919,11 @@ export const cursoData: Data[] = [
   {
     id: "17",
     variant: "marcelo",
+    mbaLink: "https://www.fecap.br/mba/mba-executivo-em-financas/",
+    cardImg: cardGestao2,
+    cardDescricao:
+      "O MBA Executivo em Finanças da FECAP prepara o aluno para cargos de direção financeira, com foco teórico e prático, oferecendo um aprofundamento sólido em finanças e formando especialistas na área.",
+    cardTag1: "MBA",
     categoria: "mba",
     nome: "MBA Executivo em Finanças",
     carga: "480 horas",

@@ -4,8 +4,19 @@ import fileText from "../assets/images/file-text.png"
 import layers from "../assets/images/layers.png"
 import circleCheck from "../assets/images/check-circle.png"
 import incompany from "../assets/images/incompany.png"
+import { Link } from "react-router-dom"
+import { whatsappConfig } from "../assets/whatsapp-config"
 
 export function InCompany() {
+  const handleWhatsappRedirect = (): void => {
+    const phoneNumber = whatsappConfig.phoneNumber.replace(/\D/g, "")
+    const message = encodeURIComponent(
+      `Olá, gostaria de saber mais sobre o In-Company!`
+    )
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`
+    window.open(whatsappUrl, "_blank")
+  }
+
   return (
     <div className="relative w-full">
       <img className="w-full" src={incompany} />
@@ -22,10 +33,17 @@ export function InCompany() {
             </p>
           </div>
           <div className="mt-10 flex gap-2">
-            <button className="px-5 py-2 border-2 border-silver font-bold text-sm rounded-2xl text-silver">
+            <Link
+              to={"/incompany"}
+              onClick={() => window.scrollTo(0, 0)}
+              className="px-5 py-2 border-2 flex justify-center items-center border-silver font-bold text-sm rounded-2xl text-silver"
+            >
               SOBRE IN-COMPANY
-            </button>
-            <button className="flex gap-2 items-center justify-center border-2 border-green200 text-green200 font-bold text-sm rounded-2xl py-2 px-5">
+            </Link>
+            <button
+              onClick={handleWhatsappRedirect}
+              className="flex gap-2 items-center justify-center border-2 border-green200 text-green200 font-bold text-sm rounded-2xl py-2 px-5"
+            >
               <img src={whatsapp} alt="Ícone Whatsapp" />
               Enviar Whatsapp
             </button>

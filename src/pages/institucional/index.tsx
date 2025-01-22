@@ -155,7 +155,7 @@ export function Institucional() {
           DIFERENCIAS CORE
         </h1>
         <div className="grid-cols-3 grid-rows-2 grid gap-x-8 gap-y-12 mt-52">
-          <div className="bg-green100 w-[460px] h-[240px] rounded-3xl flex flex-col items-center text-center justify-center gap-5">
+          <div className="bg-green300 w-[460px] h-[240px] rounded-3xl flex flex-col items-center text-center justify-center gap-5">
             <h2 className="font-bold text-2xl text-white100">
               Inovação e Modernidade
             </h2>
@@ -164,7 +164,7 @@ export function Institucional() {
               soluções avançadas para melhorar processos e resultados.
             </p>
           </div>
-          <div className="bg-green100 w-[460px] h-[240px] rounded-3xl flex flex-col items-center text-center justify-center gap-5">
+          <div className="bg-green300 w-[460px] h-[240px] rounded-3xl flex flex-col items-center text-center justify-center gap-5">
             <h2 className="font-bold text-2xl text-white100">
               Inovação e Modernidade
             </h2>
@@ -173,7 +173,7 @@ export function Institucional() {
               soluções avançadas para melhorar processos e resultados.
             </p>
           </div>
-          <div className="bg-green100 w-[460px] h-[240px] rounded-3xl flex flex-col items-center text-center justify-center gap-5">
+          <div className="bg-green300 w-[460px] h-[240px] rounded-3xl flex flex-col items-center text-center justify-center gap-5">
             <h2 className="font-bold text-2xl text-white100">
               Inovação e Modernidade
             </h2>
@@ -182,7 +182,7 @@ export function Institucional() {
               soluções avançadas para melhorar processos e resultados.
             </p>
           </div>
-          <div className="bg-green100 w-[460px] h-[240px] rounded-3xl flex flex-col items-center text-center justify-center gap-5">
+          <div className="bg-green300 w-[460px] h-[240px] rounded-3xl flex flex-col items-center text-center justify-center gap-5">
             <h2 className="font-bold text-2xl text-white100">
               Inovação e Modernidade
             </h2>
@@ -191,7 +191,7 @@ export function Institucional() {
               soluções avançadas para melhorar processos e resultados.
             </p>
           </div>
-          <div className="bg-green100 w-[460px] h-[240px] rounded-3xl flex flex-col items-center text-center justify-center gap-5">
+          <div className="bg-green300 w-[460px] h-[240px] rounded-3xl flex flex-col items-center text-center justify-center gap-5">
             <h2 className="font-bold text-2xl text-white100">
               Inovação e Modernidade
             </h2>
@@ -200,7 +200,7 @@ export function Institucional() {
               soluções avançadas para melhorar processos e resultados.
             </p>
           </div>
-          <div className="bg-green100 w-[460px] h-[240px] rounded-3xl flex flex-col items-center text-center justify-center gap-5">
+          <div className="bg-green300 w-[460px] h-[240px] rounded-3xl flex flex-col items-center text-center justify-center gap-5">
             <h2 className="font-bold text-2xl text-white100">
               Inovação e Modernidade
             </h2>
@@ -210,7 +210,7 @@ export function Institucional() {
             </p>
           </div>
         </div>
-        <div className="bg-green100 w-[530px] h-[240px] rounded-3xl flex flex-col items-center text-center justify-center gap-5 mt-12">
+        <div className="bg-green300 w-[530px] h-[240px] rounded-3xl flex flex-col items-center text-center justify-center gap-5 mt-12">
           <h2 className="font-bold text-2xl text-white100">
             Visão Integrada de Desenvolvimento Organizacional
           </h2>

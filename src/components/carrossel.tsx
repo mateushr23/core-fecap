@@ -33,9 +33,15 @@ export function Carrossel() {
     return () => clearInterval(interval)
   }) // Executa apenas uma vez após o primeiro render
 
+  const handleCarrosselClick = () => {
+    const fecapUrl = `https://www.fecap.br/`
+    window.open(fecapUrl, "_blank")
+  }
+
   return (
     <div className="relative w-full">
       <img
+        onClick={handleCarrosselClick}
         src={images[currentIndex]}
         alt={`Imagem ${currentIndex + 1}`}
         className="w-full"

@@ -14,6 +14,7 @@ import { useEffect, useState } from "react"
 import { useNavigate, useParams } from "react-router-dom"
 import { cursoData } from "../../assets/cursos"
 import { Professor } from "../../components/professor"
+import { whatsappConfig } from "../../assets/whatsapp-config"
 
 export function CursoCurta() {
   const [openModules, setOpenModules] = useState<string[]>([])
@@ -37,6 +38,17 @@ export function CursoCurta() {
           ? prev.filter((id) => id !== index) // Remove o módulo do estado
           : [...prev, index] // Adiciona o módulo ao estado
     )
+  }
+
+  const handleWhatsappRedirect = (): void => {
+    if (curso) {
+      const phoneNumber = whatsappConfig.phoneNumber.replace(/\D/g, "")
+      const message = encodeURIComponent(
+        `Olá, gostaria de me inscrever no curso ${curso.nome}!`
+      )
+      const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`
+      window.open(whatsappUrl, "_blank")
+    }
   }
 
   return (
@@ -120,7 +132,10 @@ export function CursoCurta() {
               </div>
             </div>
           </div>
-          <button className="mt-20 ml-28 w-[280px] bg-blue300 text-green200 border border-green200 hover:bg-green200 hover:text-blue300 transition delay-80 text-xl font-bold  py-4 rounded-2xl">
+          <button
+            onClick={handleWhatsappRedirect}
+            className="mt-20 ml-28 w-[280px] bg-blue300 text-green200 border border-green200 hover:bg-green200 hover:text-blue300 transition delay-80 text-xl font-bold  py-4 rounded-2xl"
+          >
             INSCREVA-SE
           </button>
         </div>
