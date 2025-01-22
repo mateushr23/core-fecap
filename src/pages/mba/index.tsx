@@ -6,8 +6,28 @@ import coreFecapLogo from "../../assets/images/core-fecap-white.png"
 import { Card } from "../../components/card"
 import { Diferenciais } from "../../components/diferenciais"
 import { Qualidade } from "../../components/qualidade"
+import { cursoData } from "../../assets/cursos"
+import { useState } from "react"
+import rightGreenArrow from "../../assets/images/right-green-arrow.png"
+import leftGreenArrow from "../../assets/images/left-green-arrow.png"
 
 export function Mba() {
+  const filteredData = cursoData.filter((curso) => curso.categoria === "mba")
+  const [startIndex, setStartIndex] = useState(0)
+  const visibleCards = 3
+
+  const handleNext = () => {
+    if (startIndex + visibleCards < filteredData.length) {
+      setStartIndex(startIndex + 1)
+    }
+  }
+
+  const handlePrev = () => {
+    if (startIndex > 0) {
+      setStartIndex(startIndex - 1)
+    }
+  }
+
   return (
     <div>
       <img className="w-full" src={carrossel1} alt="Banner de desconto Fecap" />
@@ -29,9 +49,35 @@ export function Mba() {
             MBA’S DISPONÍVEIS
           </h1>
           <div className="flex gap-7 mt-28">
-            <Card />
-            <Card />
-            <Card />
+            {filteredData.length > 0 ? (
+              <>
+                <div className="flex gap-7">
+                  <button onClick={handlePrev} disabled={startIndex === 0}>
+                    <img src={leftGreenArrow} />
+                  </button>
+                  {/* Container de cards visíveis */}
+                  {filteredData
+                    .slice(startIndex, startIndex + visibleCards)
+                    .map((curso) => (
+                      <Card
+                        key={curso.id}
+                        nome={curso.nome}
+                        descricao={curso.descricaoCard}
+                      />
+                    ))}
+                  <button
+                    onClick={handleNext}
+                    disabled={startIndex + visibleCards >= filteredData.length}
+                  >
+                    <img src={rightGreenArrow} />
+                  </button>
+                </div>
+              </>
+            ) : (
+              <p className="text-gray300 text-lg mt-10">
+                Nenhum curso nessa categoria.
+              </p>
+            )}
           </div>
         </div>
       </div>

@@ -1,5 +1,7 @@
 export interface Data {
   id: string
+  categoriaCurta?: string
+  descricaoCard?: string
   variant: string
   categoria: string
   nome: string
@@ -20,6 +22,8 @@ export const cursoData: Data[] = [
   // CURSOS CURTA DURACAO -----------------------------------------------------------------------------------------------
   {
     id: "1",
+    categoriaCurta: "gestao",
+    descricaoCard: "teste",
     variant: "renato",
     categoria: "curta",
     nome: "Ferramentas e Estratégias Essenciais para Iniciar Sua Jornada no Mundo Corporativo",
@@ -75,6 +79,8 @@ export const cursoData: Data[] = [
   },
   {
     id: "2",
+    categoriaCurta: "gestao",
+    descricaoCard: "teste 2",
     variant: "renato",
     categoria: "curta",
     nome: "Formação em Logística: Do Abastecimento à Distribuição",
@@ -128,6 +134,8 @@ export const cursoData: Data[] = [
   },
   {
     id: "3",
+    categoriaCurta: "gestao",
+    descricaoCard: "teste 3",
     variant: "carminha",
     categoria: "curta",
     nome: "Gestão de Pequenos Negócios: Empreendedorismo e Resultados",
@@ -195,6 +203,8 @@ export const cursoData: Data[] = [
   },
   {
     id: "4",
+    categoriaCurta: "gestao",
+    descricaoCard: "teste 4",
     variant: "carminha",
     categoria: "curta",
     nome: "Gestão de Vendas e Negociação com Clientes e Fornecedores",
@@ -253,6 +263,8 @@ export const cursoData: Data[] = [
   },
   {
     id: "5",
+    categoriaCurta: "gestao",
+    descricaoCard: "teste 5",
     variant: "luciane",
     categoria: "curta",
     nome: "Gestão de Conflitos",
@@ -316,6 +328,8 @@ export const cursoData: Data[] = [
   },
   {
     id: "6",
+    categoriaCurta: "gestao",
+    descricaoCard: "teste 6",
     variant: "maria",
     categoria: "curta",
     nome: "Analista de Cargos e Salários",
@@ -375,6 +389,8 @@ export const cursoData: Data[] = [
   },
   {
     id: "7",
+    categoriaCurta: "gestao",
+    descricaoCard: "teste 7",
     variant: "maria",
     categoria: "curta",
     nome: "Analista de Gente e Cultura",
@@ -434,6 +450,8 @@ export const cursoData: Data[] = [
   },
   {
     id: "8",
+    categoriaCurta: "gestao",
+    descricaoCard: "teste 8",
     variant: "maria",
     categoria: "curta",
     nome: "Analista de Treinamento & Desenvolvimento",
@@ -492,6 +510,8 @@ export const cursoData: Data[] = [
   },
   {
     id: "9",
+    categoriaCurta: "gestao",
+    descricaoCard: "teste 9",
     variant: "maria",
     categoria: "curta",
     nome: "Qualidade no Atendimento: Excelência, Inovação e Resultados",
@@ -550,6 +570,8 @@ export const cursoData: Data[] = [
   },
   {
     id: "10",
+    categoriaCurta: "gestao",
+    descricaoCard: "teste 10",
     variant: "maria",
     categoria: "curta",
     nome: "Gestão de Riscos Psicossociais e Conformidade com a NR-1",
@@ -611,6 +633,8 @@ export const cursoData: Data[] = [
   },
   {
     id: "11",
+    categoriaCurta: "gestao",
+    descricaoCard: "teste 11",
     variant: "maria",
     categoria: "curta",
     nome: "Analista de Recrutamento e Seleção",
@@ -669,6 +693,8 @@ export const cursoData: Data[] = [
   },
   {
     id: "12",
+    categoriaCurta: "gestao",
+    descricaoCard: "teste 12",
     variant: "regina",
     categoria: "curta",
     nome: "Liderança em Ação",
