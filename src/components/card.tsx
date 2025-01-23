@@ -47,14 +47,16 @@ export function Card({
   }
 
   return (
-    <div className="w-[380px] p-4 bg-white200 rounded-3xl shadow-md flex flex-col">
-      <div className="bg-green200 h-[190px] rounded-3xl overflow-hidden">
-        <img src={cardImg} alt={nome} />
+    <div className="w-[280px] md:w-[380px] p-4 bg-white200 rounded-3xl shadow-md flex flex-col">
+      <div className="bg-green200 md:h-[190px] rounded-3xl overflow-hidden">
+        <img src={cardImg} />
       </div>
       <div className="flex-grow mx-4">
-        <h1 className="mt-7 text-gray300 font-bold text-2xl">{nome}</h1>
-        <div className="flex flex-col gap-3 mt-4 mb-4">
-          <div className="flex gap-3">
+        <h1 className="mt-2 md:mt-7 text-gray500 font-bold md:text-2xl">
+          {nome}
+        </h1>
+        <div className="flex flex-col gap-3 mt-4 md:mb-4">
+          <div className="hidden md:flex gap-3">
             {cardTag1 && (
               <div className="text-green100 border-green200 border rounded-full px-4 py-2 text-xs w-fit">
                 {cardTag1}
@@ -72,24 +74,24 @@ export function Card({
             )}
           </div>
           {cardTag4 && (
-            <div className="text-brown100 border-brown100 border rounded-full px-4 py-2 text-xs w-fit">
+            <div className="hidden md:inline text-brown100 border-brown100 border rounded-full px-4 py-2 text-xs w-fit">
               {cardTag4}
             </div>
           )}
         </div>
-        <p className="text-gray300 text-sm">{cardDescricao}</p>
+        <p className="text-gray500 text-sm">{cardDescricao}</p>
       </div>
       <div className="flex items-center justify-between mt-4 mx-4 mb-4">
         <button
           onClick={handleInscrevase}
-          className="border border-green200 rounded-2xl font-bold px-4 py-2 text-green200 hover:bg-green200 hover:text-white transition delay-80"
+          className="md:text-base text-sm border border-green200 rounded-2xl font-bold px-2 md:px-4 md:py-2 text-green200 hover:bg-green200 hover:text-white transition delay-80"
         >
           INSCREVA-SE
         </button>
         <Link
           to={`/curso/${categoria}/${cursoId}`}
           onClick={() => window.scrollTo(0, 0)}
-          className="text-gray300 underline hover:font-semibold transition delay-80"
+          className="md:text-base text-sm text-gray300 underline hover:font-semibold transition delay-80"
         >
           SAIBA MAIS
         </Link>

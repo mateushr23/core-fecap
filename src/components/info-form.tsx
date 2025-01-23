@@ -45,39 +45,39 @@ export function InfoForm() {
   }
 
   return (
-    <div className="h-[1300px] bg-white300 items-center flex justify-center">
-      <div className="flex gap-80">
-        <div className="w-[400px]">
-          <h1 className="text-blue300 font-bold text-4xl">
+    <div className="h-[1300px] bg-white300 md:items-center flex justify-center">
+      <div className="flex lg:gap-80 flex-col md:flex-row">
+        <div className="w-[300px] m-4">
+          <h1 className="text-blue300 font-bold text-2xl lg:text-4xl ">
             QUER MAIS INFORMAÇÕES?
           </h1>
-          <h2 className="text-xl font-bold text-blue300 mt-8">
+          <h2 className="lg:text-xl font-bold text-blue300 lg:mt-8">
             É muito fácil!
           </h2>
-          <p className="text-xl text-blue300 mt-8">
+          <p className="lg:text-xl text-blue300 lg:mt-8">
             Faça seu cadastro e nós entraremos em contato com você!
           </p>
-          <p className="font-bold text-gray300 text-base mt-12">
+          <p className="font-bold text-gray300 text-sm lg:text-base lg:mt-12">
             R. Laranjeiras Do Sul, 770 - Jardim das Américas, Primavera do Leste
             - MT
           </p>
-          <p className="font-bold text-gray300 text-base mt-10">
+          <p className="font-bold text-gray300 text-sm lg:text-base lg:mt-10">
             contato@corenegocios.com.br
           </p>
         </div>
         {enviado ? (
-          <p className="items-center justify-center bg-white text-gray-400 rounded-3xl p-16 flex gap-10 flex-col w-[570px] shadow-md">
+          <p className="items-center md:h-52 justify-center bg-white text-gray-400 m-4 text-center rounded-3xl p-16 flex gap-10 flex-col lg:w-[570px] shadow-md">
             Solicitação enviada com sucesso!
           </p>
         ) : (
           <form
             ref={form}
-            className="bg-white rounded-3xl p-16 flex gap-10 flex-col w-[570px] shadow-md"
+            className="bg-white rounded-3xl p-8 lg:p-16 flex gap-10 flex-col m-4 md:w-[570px] shadow-md"
             onSubmit={sendEmail}
           >
             <input
               name="nome"
-              className="border border-gray400 rounded-lg p-3 font-semibold text-base"
+              className="border border-gray400 rounded-lg p-3 font-semibold text-sm lg:text-base"
               type="text"
               placeholder="Nome completo"
               value={nome}
@@ -86,7 +86,7 @@ export function InfoForm() {
             />
             <input
               name="email"
-              className="border border-gray400 rounded-lg p-3 font-semibold text-base"
+              className="border border-gray400 rounded-lg p-3 font-semibold text-sm lg:text-base"
               type="email"
               placeholder="E-mail"
               value={email}
@@ -95,7 +95,7 @@ export function InfoForm() {
             />
             <input
               name="celular"
-              className="border border-gray400 rounded-lg p-3 font-semibold text-base"
+              className="border border-gray400 rounded-lg p-3 font-semibold text-sm lg:text-base"
               type="tel"
               pattern="[0-9]*"
               inputMode="numeric"
@@ -111,7 +111,7 @@ export function InfoForm() {
             />
             <input
               name="empresa"
-              className="border border-gray400 rounded-lg p-3 font-semibold text-base"
+              className="border border-gray400 rounded-lg p-3 font-semibold text-sm lg:text-base"
               type="text"
               placeholder="Empresa"
               value={empresa}
@@ -120,7 +120,7 @@ export function InfoForm() {
             />
             <input
               name="cargo"
-              className="border border-gray400 rounded-lg p-3 font-semibold text-base"
+              className="border border-gray400 rounded-lg p-3 font-semibold text-sm lg:text-base"
               type="text"
               placeholder="Cargo"
               value={cargo}
@@ -129,15 +129,14 @@ export function InfoForm() {
             />
             <input
               name="oQueDeseja"
-              className="border border-gray400 rounded-lg p-3 font-semibold text-base"
+              className="border border-gray400 rounded-lg p-3 font-semibold text-sm lg:text-base"
               type="text"
               placeholder="O que deseja saber?"
               value={oQueDeseja}
               onChange={(e) => setOqueDeseja(e.target.value)}
               required
             />
-
-            <p className="font-semibold text-base text-gray400">
+            <p className="font-semibold text-xs lg:text-base text-gray400">
               Nós usaremos seus dados para entrar em contato com você sobre as
               informações solicitadas neste formulário e sobre outras
               informações correlacionadas que podem ser de seu interesse. Você
