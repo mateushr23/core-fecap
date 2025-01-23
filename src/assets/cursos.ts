@@ -820,7 +820,7 @@ export const cursoData: Data[] = [
         ],
       },
       {
-        titulo: "Módulo 3 -  Comunicação e Relacionamento Interpessoal",
+        titulo: "Módulo 3 - Comunicação e Relacionamento Interpessoal",
         topicos: [
           "A comunicação como pilar da liderança.",
           "Técnicas de comunicação eficaz.",
@@ -903,7 +903,7 @@ export const cursoData: Data[] = [
         ],
       },
       {
-        titulo: "Módulo 3 -  Ferramentas Lean para Operações e Gestão",
+        titulo: "Módulo 3 - Ferramentas Lean para Operações e Gestão",
         topicos: [
           "Kaizen: Ciclo PDCA para melhoria contínua.",
           "5S: Organização e padronização de espaços de trabalho.",
@@ -929,10 +929,79 @@ export const cursoData: Data[] = [
       },
     ],
   },
+  {
+    id: "14",
+    banner: bannerCurta1,
+    categoriaCurta: "gestao",
+    cardImg: cardGestao3,
+    cardDescricao: "teste",
+    cardTag1: "CURTA-DURAÇÃO",
+    cardTag2: "EAD",
+    cardTag3: "PRESENCIAL",
+    cardTag4: "GESTÃO",
+    variant: "leandro",
+    categoria: "curta",
+    nome: "Analista Agile: Transformação e Gestão Ágil de Projetos",
+    carga: "40 horas",
+    modalidade: "Aulas remotas ao vivo",
+    data: "Consulte-nos para mais informações",
+    inscricao: "De 03 de fevereiro a 03 de março de 2025",
+    sobre:
+      "O curso capacita profissionais para liderar e implementar práticas ágeis em seus ambientes de trabalho. Com base em frameworks consagrados, como Scrum, Kanban, SAFe e XP, o curso desenvolve competências essenciais para a transformação ágil, incluindo planejamento, organização e entrega contínua de valor.",
+    oQueLeva:
+      "Entendimento profundo dos principais frameworks ágeis.\n Ferramentas práticas para liderar equipes e projetos ágeis.\n Habilidades para promover uma cultura de colaboração e entrega contínua.\n Certificação reconhecida como Analista Agile.\n Conexão com profissionais de diversas áreas e setores.",
+    paraQuem:
+      "Profissionais que atuam em equipes ágeis nas áreas de Tecnologia da Informação, Desenvolvimento de Software, Gestão de Projetos, Marketing, Recursos Humanos, Design, Operações e outras áreas, e/ou desejam adotar práticas ágeis.\n Gerentes e líderes interessados em implementar ou otimizar metodologias ágeis em suas equipes.\n Desenvolvedores, analistas de negócios, designers e profissionais de produto.\n Estudantes e recém-formados que desejam especialização em métodos ágeis.",
+    modulos: [
+      {
+        titulo: "Módulo 1 - Introdução ao Mindset Ágil",
+        topicos: [
+          "O que é Agilidade?",
+          "Manifesto Ágil e seus princípios.",
+          "Benefícios da adoção do mindset ágil nas organizações.",
+        ],
+      },
+      {
+        titulo: "Módulo 2 - Frameworks Ágeis: Scrum e Kanban",
+        topicos: [
+          "Estrutura e papéis no Scrum (Product Owner, Scrum Master, Equipe de Desenvolvimento).",
+          "Eventos do Scrum (Sprint Planning, Daily, Review e Retrospectiva).",
+          "Kanban: conceitos, fluxos de trabalho e gestão visual.",
+          "Diferenças e complementaridades entre Scrum e Kanban.",
+        ],
+      },
+      {
+        titulo: "Módulo 3 - Escalando Agilidade com SAFe e XP",
+        topicos: [
+          "SAFe (Scaled Agile Framework): visão geral e benefícios.",
+          "Práticas de Extreme Programming (XP): integração contínua, TDD, pair programming.",
+          "Gestão de dependências em projetos complexos.",
+        ],
+      },
+      {
+        titulo: "Módulo 4 - Gestão de Equipes e Liderança Ágil",
+        topicos: [
+          "Papéis e responsabilidades de um Analista Agile.",
+          "Facilitação de cerimônias ágeis.",
+          "Como engajar e motivar equipes multidisciplinares.",
+          "Gestão de stakeholders e comunicação efetiva.",
+        ],
+      },
+      {
+        titulo: "Módulo 5 - Implementação e Estudos de Caso",
+        topicos: [
+          "Planejamento e execução de um projeto ágil.",
+          "Estudos de caso em diferentes setores (TI, Marketing, RH, etc.).",
+          "Ferramentas ágeis: Jira, Trello, ClickUp e outros.",
+          "Criação de um roadmap ágil para a sua organização.",
+        ],
+      },
+    ],
+  },
 
   //CURSOS MBA---------------------------------------------------
   {
-    id: "13",
+    id: "1",
     variant: "ademar",
     mbaLink: "https://www.fecap.br/mba/mba-accounting/",
     cardImg: cardGestao1,
@@ -949,7 +1018,7 @@ export const cursoData: Data[] = [
       "O MBA Accounting é voltado para gestores ou futuros gestores com experiência profissional superior a 3 anos. São profissionais que buscam o aperfeiçoamento contínuo para enfrentar os desafios das organizações e assumir posições de destaque no mercado de trabalho. Os cursos de pós-graduação da FECAP permitem aperfeiçoamento profissional e desenvolvimento pessoal, capacitando o aluno para atuar com integridade em uma área específica no mercado de trabalho.",
   },
   {
-    id: "14",
+    id: "2",
     variant: "jose",
     mbaLink: "https://www.fecap.br/mba/mba-em-agribusiness-marketing-commerce/",
     cardImg: cardGestao2,
@@ -966,7 +1035,7 @@ export const cursoData: Data[] = [
       "Preparado com as competências necessárias para ser um gestor em organizações do complexo do agronegócio, no antes, dentro ou pós porteira das fazendas, da mesma forma no cooperativismo, associativismo, ONGs, mídia, nas funções públicas e/ou privadas, em organizações da sociedade civil , com valor agregado de práticas de comércio para aplicação em iniciativas próprias empreendedoras e/ou desenvolvimento de suas carreiras.",
   },
   {
-    id: "15",
+    id: "3",
     variant: "roberto",
     mbaLink: "https://www.fecap.br/mba/mba-em-gestao-de-negocios/",
     cardImg: cardGestao3,
@@ -983,7 +1052,7 @@ export const cursoData: Data[] = [
       "Os cursos de pós-graduação da FECAP permitem aperfeiçoamento profissional e desenvolvimento pessoal, capacitando o aluno para atuar com integridade em uma área específica no mercado de trabalho. Além disso, nossos cursos de especialização com metodologia empreendedora foram destaques no Guia do Estudante e classificados entre os melhores do Brasil, pela revista Você S/A.",
   },
   {
-    id: "16",
+    id: "4",
     variant: "sergio",
     mbaLink: "https://www.fecap.br/mba/mba-em-gestao-de-riscos-e-compliance/",
     cardImg: cardGestao1,
@@ -1000,7 +1069,7 @@ export const cursoData: Data[] = [
       "A infraestrutura da FECAP atende a todas as necessidades do aluno durante o curso, com laboratório de informática de alta tecnologia, salas de aula equipadas e uma biblioteca com acervo de mais de 60 mil exemplares.",
   },
   {
-    id: "17",
+    id: "5",
     variant: "marcelo",
     mbaLink: "https://www.fecap.br/mba/mba-executivo-em-financas/",
     cardImg: cardGestao2,

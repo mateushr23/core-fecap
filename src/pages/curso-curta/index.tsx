@@ -195,7 +195,10 @@ export function CursoCurta() {
           precisar.
         </p>
 
-        <button className="border border-green200 hover:bg-green200 hover:text-white300 transition delay-80 font-bold text-xl bg-white300 px-8 py-3 rounded-2xl text-green200 mt-16">
+        <button
+          onClick={handleWhatsappRedirect}
+          className="border border-green200 hover:bg-green200 hover:text-white300 transition delay-80 font-bold text-xl bg-white300 px-8 py-3 rounded-2xl text-green200 mt-16"
+        >
           INSCREVA-SE
         </button>
       </div>

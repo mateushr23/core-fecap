@@ -3,7 +3,7 @@ import { InCompany } from "../../components/in-company"
 import bannerTecnico from "../../assets/images/banner-tecnico.png"
 import { InfoForm } from "../../components/info-form"
 import search from "../../assets/images/search.png"
-import { Card } from "../../components/card"
+// import { Card } from "../../components/card"
 import { useNavigate } from "react-router-dom"
 import { useState, ChangeEvent } from "react"
 import { Data, cursoData } from "../../assets/cursos"
@@ -85,9 +85,9 @@ export function Tecnicos() {
             CURSOS OFERECIDOS!
           </h1>
           <div className="flex gap-7 mt-11">
+            {/* <Card />
             <Card />
-            <Card />
-            <Card />
+            <Card /> */}
           </div>
         </div>
       </div>
