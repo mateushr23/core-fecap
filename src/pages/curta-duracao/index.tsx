@@ -18,7 +18,7 @@ export function CurtaDuracao() {
   const [startIndex, setStartIndex] = useState(0)
   const visibleCards = 4
   const specificCursos = cursoData.filter(
-    (curso) => curso.id === "1" || curso.id === "2" || curso.id === "3"
+    (curso) => curso.id === "2" || curso.id === "4" || curso.id === "9"
   )
 
   const filteredData = cursoData
@@ -125,6 +125,7 @@ export function CurtaDuracao() {
                 cardTag1={curso.cardTag1}
                 cardTag2={curso.cardTag2}
                 cardTag3={curso.cardTag3}
+                cardTag4={curso.cardTag4}
                 cursoId={curso.id}
                 categoria={curso.categoria}
               />
@@ -187,6 +188,7 @@ export function CurtaDuracao() {
                         cardTag1={curso.cardTag1}
                         cardTag2={curso.cardTag2}
                         cardTag3={curso.cardTag3}
+                        cardTag4={curso.cardTag4}
                         cursoId={curso.id}
                         categoria={curso.categoria}
                       />

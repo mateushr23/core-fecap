@@ -9,6 +9,7 @@ import carminhaProfessor from "../assets/images/carminha-professor.png"
 import lucianeProfessor from "../assets/images/luciane-professor.png"
 import mariaProfessor from "../assets/images/maria-professor.png"
 import reginaProfessor from "../assets/images/regina-professor.png"
+import sergiolopesProfessor from "../assets/images/sergiolopes-professor.png"
 
 export interface Data {
   titulo: string
@@ -109,6 +110,19 @@ export const professorData: Data[] = [
       text: "text-blue300",
     },
     lattes: "http://lattes.cnpq.br/7338111012005484",
+  },
+  {
+    titulo: "PROFESSOR",
+    img: sergiolopesProfessor,
+    variant: "sergiolopes",
+    nome: "Prof. Me. Sérgio Lopes",
+    descricao:
+      "Mestre e graduado em Administração. Experiência profissional de 57 anos adquirida em empresas de diferentes portes e segmentos econômicos. Nos últimos 39 anos tem atuado ativamente como Consultor Empresarial, Docente em cursos de Graduação e de Pós-graduação/MBA e Instrutor em Cursos de Educação Corporativa, lecionando em diversos Estados do País. Conteudista e tutor de disciplinas de Cursos de Graduação e PG, modalidade EAD. Atua, também, como Palestrante, Pesquisador e Articulista e possui mais de 100 (cem) artigos publicados, em jornais, revistas e sites da Internet. Participa de projetos de voluntariado junto a Entidades de Classe. Suas áreas de atuação são Planejamento e Gestão Empresarial, Mudança e Inovação Organizacional, Qualidade, Recursos Humanos e LGPD. É membro do GEES/CRASP - Grupo de Excelência em Ética e Sustentabilidade desde 2007.",
+    cores: {
+      div: "bg-blue300",
+      background: "bg-white100",
+      text: "text-blue300",
+    },
   },
 
   //MBA------------------------------------

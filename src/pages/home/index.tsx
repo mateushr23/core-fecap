@@ -19,7 +19,7 @@ export function Home() {
   const navigate = useNavigate()
 
   const specificCursos = cursoData.filter(
-    (curso) => curso.id === "1" || curso.id === "2" || curso.id === "3"
+    (curso) => curso.id === "2" || curso.id === "4" || curso.id === "9"
   )
 
   const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -181,6 +181,7 @@ export function Home() {
               cardTag1={curso.cardTag1}
               cardTag2={curso.cardTag2}
               cardTag3={curso.cardTag3}
+              cardTag4={curso.cardTag4}
               categoria={curso.categoria}
               cursoId={curso.id}
             />

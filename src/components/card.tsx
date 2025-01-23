@@ -9,6 +9,7 @@ interface CardProps {
   cardTag1?: string
   cardTag2?: string
   cardTag3?: string
+  cardTag4?: string
   cursoId: string
   categoria: string
 }
@@ -20,6 +21,7 @@ export function Card({
   cardTag1,
   cardTag2,
   cardTag3,
+  cardTag4,
   cursoId,
   categoria,
 }: CardProps) {
@@ -51,20 +53,27 @@ export function Card({
       </div>
       <div className="flex-grow mx-4">
         <h1 className="mt-7 text-gray300 font-bold text-2xl">{nome}</h1>
-        <div className="flex gap-3 mt-4 mb-4">
-          {cardTag1 && (
-            <div className="text-green100 border-green200 border rounded-full px-4 py-2 text-xs">
-              {cardTag1}
-            </div>
-          )}
-          {cardTag2 && (
-            <div className="text-gray400 border-gray500 border rounded-full px-4 py-2 text-xs">
-              {cardTag2}
-            </div>
-          )}
-          {cardTag3 && (
-            <div className="text-blue100 border-blue200 border rounded-full px-4 py-2 text-xs">
-              {cardTag3}
+        <div className="flex flex-col gap-3 mt-4 mb-4">
+          <div className="flex gap-3">
+            {cardTag1 && (
+              <div className="text-green100 border-green200 border rounded-full px-4 py-2 text-xs w-fit">
+                {cardTag1}
+              </div>
+            )}
+            {cardTag2 && (
+              <div className="text-gray400 border-gray500 border rounded-full px-4 py-2 text-xs w-fit">
+                {cardTag2}
+              </div>
+            )}
+            {cardTag3 && (
+              <div className="text-blue100 border-blue200 border rounded-full px-4 py-2 text-xs w-fit">
+                {cardTag3}
+              </div>
+            )}
+          </div>
+          {cardTag4 && (
+            <div className="text-brown100 border-brown100 border rounded-full px-4 py-2 text-xs w-fit">
+              {cardTag4}
             </div>
           )}
         </div>
