@@ -66,7 +66,7 @@ export function Header() {
       <div className="flex h-[100px] items-center bg-white text-black px-8 lg:px-10 xl:px-20 justify-between">
         {/* Logo */}
         <img
-          className="w-25 lg:w-auto xl:w-auto"
+          className="w-40 lg:w-auto xl:w-auto"
           src={logo}
           alt="Logo da Core e da Fecap"
         />
@@ -140,7 +140,7 @@ export function Header() {
           {/* Botão WhatsApp */}
           <button
             onClick={handleWhatsappRedirect}
-            className="flex h-[50px] gap-1 border-2 rounded-full border-green200 text-sm items-center p-4 font-semibold text-green200"
+            className="flex md:h-[50px] gap-1 border-2 rounded-full border-green200 text-sm items-center p-2 md:p-4 font-semibold text-green200"
           >
             <img src={whatsapp} alt="Ícone do WhatsApp" />
             <span className="hidden xl:inline">FALE CONOSCO</span>

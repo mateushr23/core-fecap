@@ -10,14 +10,14 @@ export function BannerEscola() {
         alt="Banner da escola"
       />
       <div className="absolute flex-col inset-0 flex items-center justify-center">
-        <div className="w-[800px] text-center">
-          <h1 className="text-white font-bold text-4xl">
+        <div className="w-[800px] text-center items-center flex flex-col">
+          <h1 className="text-white font-bold text-xs md:text-xl lg:text-4xl">
             VIVA UMA EXPERIÊNCIA TRANSFORMADORA
           </h1>
-          <h2 className="text-green200 font-bold text-4xl mb-6 mt-2">
+          <h2 className="text-green200 font-bold text-xs md:text-xl lg:text-4xl mb-6 mt-2">
             COM EXCELÊNCIA, INOVAÇÃO E RESULTADOS
           </h2>
-          <p className="text-white text-xl mb-8">
+          <p className="mx-4 text-white text-sm lg:text-lg mb-8 hidden md:inline">
             A CORE é uma empresa jovem e moderna, dedicada a proporcionar aos
             seus clientes as melhores estratégias, alinhadas às demandas do
             mercado.
@@ -25,7 +25,7 @@ export function BannerEscola() {
           <Link
             to={"/institucional"}
             onClick={() => window.scrollTo(0, 0)}
-            className="border-2 border-green200 py-3 px-6 text-green200 font-bold rounded-2xl"
+            className="border-2 text-xs border-green200 py-1 px-3 md:py-3 md:px-6 text-green200 font-bold rounded-2xl"
           >
             CONHEÇA A CORE
           </Link>
