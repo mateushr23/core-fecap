@@ -2,6 +2,7 @@ import { BannerEscola } from "../../components/banner-escola"
 import { InCompany } from "../../components/in-company"
 import { Parceiros } from "../../components/parceiros"
 import bannerCurta from "../../assets/images/banner-curta.png"
+import bannerCurtaMobile from "../../assets/images/bannerCurtaMobile.png"
 import search from "../../assets/images/search.png"
 import { Card } from "../../components/card"
 import { ChangeEvent, useState } from "react"
@@ -15,10 +16,16 @@ export function CurtaDuracao() {
   const [filteredCursos, setFilteredCursos] = useState<Data[]>([])
   const [activeCategory, setActiveCategory] = useState<string>("todos")
   const navigate = useNavigate()
-  const [startIndex, setStartIndex] = useState(0)
-  const visibleCards = 4
+  const [todosIndex, setTodosIndex] = useState(0)
+  const [maisProcuradosIndex, setMaisProcuradosIndex] = useState(0)
+
+  const visibleCards = 3
+  const visibleCardsSmallScreen = 1
+
   const specificCursos = cursoData.filter(
-    (curso) => curso.id === "2" || curso.id === "4" || curso.id === "9"
+    (curso) =>
+      (curso.id === "2" || curso.id === "4" || curso.id === "9") &&
+      curso.categoria === "curta"
   )
 
   const filteredData = cursoData
@@ -30,15 +37,30 @@ export function CurtaDuracao() {
     )
 
   const handleNext = () => {
-    if (startIndex + visibleCards < filteredData.length) {
-      setStartIndex(startIndex + 1)
+    if (todosIndex + visibleCards < filteredData.length) {
+      setTodosIndex(todosIndex + 1)
     }
   }
 
   const handlePrev = () => {
-    if (startIndex > 0) {
-      setStartIndex(startIndex - 1)
+    if (todosIndex > 0) {
+      setTodosIndex(todosIndex - 1)
     }
+  }
+
+  const handleNextMaisProcurados = () => {
+    // Vai para o próximo card, volta ao início no final do array
+    setMaisProcuradosIndex(
+      (prevIndex) => (prevIndex + 1) % specificCursos.length
+    )
+  }
+
+  const handlePrevMaisProcurados = () => {
+    // Volta para o card anterior, vai para o último no início do array
+    setMaisProcuradosIndex(
+      (prevIndex) =>
+        (prevIndex - 1 + specificCursos.length) % specificCursos.length
+    )
   }
 
   const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -68,46 +90,41 @@ export function CurtaDuracao() {
 
   const handleCategoryFilter = (category: string) => {
     setActiveCategory(category) // Atualiza a categoria ativa
-    setStartIndex(0) // Reinicia o índice de início
+    setTodosIndex(0) // Reinicia o índice de início
   }
 
   return (
     <div>
-      <img
-        className="w-full"
-        src={bannerCurta}
-        alt="Banner de desconto Fecap"
-      />
+      <img className="w-full hidden xl:block" src={bannerCurta} />
+      <img className="w-full xl:hidden" src={bannerCurtaMobile} />
       <div className="h-[590px] bg-white300 flex flex-col items-center justify-center">
-        <h1 className="text-blue300 font-bold text-4xl mb-16">
+        <h1 className="text-blue300 font-bold text-3xl md:text-4xl mb-16 text-center">
           VEJA NOSSOS CURSOS DISPONÍVEIS
         </h1>
-        <div className="flex gap-4 w-[780px] justify-between">
-          <div className="flex gap-2 border border-green200 rounded-full py-6 px-8">
-            <img src={search} alt="Ícone lupa de pesquisa" />
-            <input
-              className="w-[780px] focus:outline-none bg-white300 "
-              type="text"
-              placeholder="Pesquisar curso desejado..."
-              value={searchTerm}
-              onChange={handleInputChange}
-            />
-            {filteredCursos.length > 0 && (
-              <ul className="absolute mt-12 z-10 w-[700px] bg-white100 border rounded shadow-lg max-h-40 overflow-y-auto">
-                {filteredCursos.map((curso) => (
-                  <li
-                    key={curso.id}
-                    className="p-2 hover:bg-gray-200 cursor-pointer"
-                    onClick={() =>
-                      handleSuggestionClick(curso.categoria, curso.id)
-                    }
-                  >
-                    {curso.nome}
-                  </li>
-                ))}
-              </ul>
-            )}
-          </div>
+        <div className="flex gap-2 w-screen md:w-[600px] lg:w-[1000px] border border-green200 rounded-full py-6 px-8 relative">
+          <img src={search} alt="Ícone lupa de pesquisa" />
+          <input
+            className="w-full focus:outline-none bg-white300 "
+            type="text"
+            placeholder="Pesquisar curso desejado..."
+            value={searchTerm}
+            onChange={handleInputChange}
+          />
+          {filteredCursos.length > 0 && (
+            <ul className="absolute top-full z-10 w-screen md:w-[520px] lg:w-[920px] bg-white100 border rounded shadow-lg max-h-40 overflow-y-auto">
+              {filteredCursos.map((curso) => (
+                <li
+                  key={curso.id}
+                  className="p-2 hover:bg-gray-200 cursor-pointer"
+                  onClick={() =>
+                    handleSuggestionClick(curso.categoria, curso.id)
+                  }
+                >
+                  {curso.nome}
+                </li>
+              ))}
+            </ul>
+          )}
         </div>
       </div>
       <div className="bg-white100 h-[2340px] flex flex-col">
@@ -115,7 +132,41 @@ export function CurtaDuracao() {
           <h1 className="text-white font-bold text-4xl bg-green200 px-5 py-4">
             CURSOS MAIS PROCURADOS!
           </h1>
-          <div className="flex gap-7 mt-11">
+          <div className="relative w-full flex justify-center items-center mt-20 xl:hidden">
+            <div className="relative flex items-center justify-center">
+              {/* Botão Anterior */}
+              <button
+                onClick={handlePrevMaisProcurados}
+                className="absolute  top-[50%] left-[-60px] transform -translate-y-1/2 px-4 py-2 rounded hover:bg-gray-400"
+              >
+                <img src={leftGreenArrow} />
+              </button>
+              {/* Card atual */}
+              <Card
+                nome={specificCursos[maisProcuradosIndex].nome}
+                cardDescricao={
+                  specificCursos[maisProcuradosIndex].cardDescricao
+                }
+                cardImg={specificCursos[maisProcuradosIndex].cardImg}
+                cardTag1={specificCursos[maisProcuradosIndex].cardTag1}
+                cardTag2={specificCursos[maisProcuradosIndex].cardTag2}
+                cardTag3={specificCursos[maisProcuradosIndex].cardTag3}
+                cardTag4={specificCursos[maisProcuradosIndex].cardTag4}
+                categoria={specificCursos[maisProcuradosIndex].categoria}
+                cursoId={specificCursos[maisProcuradosIndex].id}
+              />
+              {/* Botão Próximo */}
+              <button
+                onClick={handleNextMaisProcurados}
+                className="absolute top-[50%] right-[-60px] transform -translate-y-1/2 px-4 py-2 rounded hover:bg-gray-400"
+              >
+                <img src={rightGreenArrow} />
+              </button>
+            </div>
+          </div>
+
+          {/* Layout para telas grandes (3 cards exibidos lado a lado) */}
+          <div className="hidden xl:flex gap-7 mt-20">
             {specificCursos.map((curso) => (
               <Card
                 key={curso.id}
@@ -126,8 +177,8 @@ export function CurtaDuracao() {
                 cardTag2={curso.cardTag2}
                 cardTag3={curso.cardTag3}
                 cardTag4={curso.cardTag4}
-                cursoId={curso.id}
                 categoria={curso.categoria}
+                cursoId={curso.id}
               />
             ))}
           </div>
@@ -137,7 +188,7 @@ export function CurtaDuracao() {
           <h1 className="text-white font-bold text-4xl bg-green200 w-[560px] py-4 text-center mt-4">
             POR CATEGORIA
           </h1>
-          <div className="flex mt-32 gap-16">
+          <div className="flex flex-col md:flex-row mt-32 gap-8 md:gap-16">
             <button
               onClick={() => handleCategoryFilter("todos")}
               className={`border ${
@@ -169,16 +220,16 @@ export function CurtaDuracao() {
               GESTÃO
             </button>
           </div>
-          <div className="flex flex-col items-center gap-7 mt-32">
+          <div className="xl:hidden flex flex-col items-center gap-7 mt-32">
             {filteredData.length > 0 ? (
               <>
                 <div className="flex gap-7">
-                  <button onClick={handlePrev} disabled={startIndex === 0}>
+                  <button onClick={handlePrev} disabled={todosIndex === 0}>
                     <img src={leftGreenArrow} />
                   </button>
                   {/* Container de cards visíveis */}
                   {filteredData
-                    .slice(startIndex, startIndex + visibleCards)
+                    .slice(todosIndex, todosIndex + visibleCardsSmallScreen)
                     .map((curso) => (
                       <Card
                         key={curso.id}
@@ -195,7 +246,48 @@ export function CurtaDuracao() {
                     ))}
                   <button
                     onClick={handleNext}
-                    disabled={startIndex + visibleCards >= filteredData.length}
+                    disabled={
+                      todosIndex + visibleCardsSmallScreen >=
+                      filteredData.length
+                    }
+                  >
+                    <img src={rightGreenArrow} />
+                  </button>
+                </div>
+              </>
+            ) : (
+              <p className="text-gray300 text-lg mt-10">
+                Nenhum curso nessa categoria.
+              </p>
+            )}
+          </div>
+          <div className="hidden xl:flex flex-col items-center gap-7 mt-32">
+            {filteredData.length > 0 ? (
+              <>
+                <div className="flex gap-7">
+                  <button onClick={handlePrev} disabled={todosIndex === 0}>
+                    <img src={leftGreenArrow} />
+                  </button>
+                  {/* Container de cards visíveis */}
+                  {filteredData
+                    .slice(todosIndex, todosIndex + visibleCards)
+                    .map((curso) => (
+                      <Card
+                        key={curso.id}
+                        nome={curso.nome}
+                        cardDescricao={curso.cardDescricao}
+                        cardImg={curso.cardImg}
+                        cardTag1={curso.cardTag1}
+                        cardTag2={curso.cardTag2}
+                        cardTag3={curso.cardTag3}
+                        cardTag4={curso.cardTag4}
+                        cursoId={curso.id}
+                        categoria={curso.categoria}
+                      />
+                    ))}
+                  <button
+                    onClick={handleNext}
+                    disabled={todosIndex + visibleCards >= filteredData.length}
                   >
                     <img src={rightGreenArrow} />
                   </button>

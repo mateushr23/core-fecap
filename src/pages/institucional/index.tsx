@@ -13,17 +13,17 @@ export function Institucional() {
       <div className="h-[650px] bg-blue300 flex items-center justify-center">
         <img src={coreLogo} alt="Logo Core" />
       </div>
-      <div className="flex">
-        <div className="w-[1020px] bg-white100 flex flex-col items-center text-center justify-center">
-          <div className="w-[720px]">
-            <h1 className="text-blue300 font-bold text-4xl text-start">
+      <div className="flex flex-col lg:flex-row">
+        <div className="lg:w-[1320px] bg-white100 flex flex-col items-center text-center justify-center">
+          <div className=" w-screen lg:w-[600px] flex flex-col lg:items-start items-center p-4">
+            <h1 className="text-blue300 font-bold text-2xl lg:text-4xl lg:text-start">
               VIVA UMA EXPERIÊNCIA TRANSFORMADORA QUE UNE
             </h1>
-            <h1 className="text-green200 font-bold text-4xl text-start mt-2">
+            <h1 className="text-green200 font-bold text-2xl lg:text-4xl lg:text-start mt-2">
               EXCELÊNCIA, INOVAÇÃO E RESULTADOS.
             </h1>
             <div className="h-1 bg-green200 w-[145px] mt-6 mb-6" />
-            <div className="text-blue300 text-xl text-justify hyphens-auto flex flex-col gap-4">
+            <div className="text-blue300 md:text-xl text-justify hyphens-auto flex flex-col gap-4">
               <p>
                 A CORE Escola de Negócios nasceu do espírito empreendedor de um
                 jovem determinado. Inspirado pelos princípios e sucesso
@@ -50,38 +50,38 @@ export function Institucional() {
         </div>
         <img src={novaGeracao} alt="Escola Nova Geracao" />
       </div>
-      <div className="h-[1440px] bg-blue300 flex items-center justify-center">
-        <div className="flex flex-col gap-28">
-          <div className="flex gap-12 items-center">
-            <img src={missao} />
-            <div className="w-[720px]">
+      <div className="h-[500px] md:h-[1440px] bg-blue300 flex items-center justify-center md:p-8">
+        <div className="flex flex-col gap-10 md:gap-28 ">
+          <div className="flex gap-12 items-center justify-center">
+            <img className="w-24 md:w-auto" src={missao} />
+            <div className="md:w-[720px]">
               <h1 className="text-4xl text-green200 font-bold">MISSÃO</h1>
               <div className="h-1 w-[145px] bg-green200 mt-7" />
-              <p className="text-xl text-white mt-7">
+              <p className="text-xl text-white mt-7 hidden md:block">
                 Oferecer soluções de excelência, personalizadas para as
                 necessidades específicas de cada cliente, alinhando-se às
                 tendências e demandas do mercado.
               </p>
             </div>
           </div>
-          <div className="flex gap-12 items-center">
-            <img src={visao} />
-            <div className="w-[720px]">
+          <div className="flex gap-12 items-center justify-center">
+            <img className="w-24 md:w-auto" src={visao} />
+            <div className="md:w-[720px]">
               <h1 className="text-4xl text-green200 font-bold">VISÃO</h1>
               <div className="h-1 w-[145px] bg-green200 mt-7" />
-              <p className="text-xl text-white mt-7">
+              <p className="text-xl text-white mt-7 hidden md:block">
                 Ser referência em nosso segmento, reconhecidos pela
                 superioridade de nossos serviços e pelos impactos positivos que
                 promovemos nos resultados de nossos clientes e parceiros.
               </p>
             </div>
           </div>
-          <div className="flex gap-12 items-center">
-            <img className="mb-72" src={valores} />
-            <div className="w-[720px]">
+          <div className="flex gap-12 items-center justify-center">
+            <img className="w-24 md:w-auto md:mb-72" src={valores} />
+            <div className="md:w-[720px]">
               <h1 className="text-4xl text-green200 font-bold">VALORES</h1>
               <div className="h-1 w-[145px] bg-green200 mt-7" />
-              <ul className="text-xl text-white mt-7 list-disc gap-2 flex flex-col text-justify hyphens-auto">
+              <ul className="text-xl text-white mt-7 list-disc gap-2 md:flex flex-col text-justify hyphens-auto hidden">
                 <li>
                   <span className="font-bold">Excelência</span>: Buscar
                   continuamente os mais altos padrões de qualidade.
@@ -120,11 +120,11 @@ export function Institucional() {
         </div>
       </div>
       <div className="h-[1000px] bg-white500 flex flex-col items-center relative">
-        <h1 className="font-bold text-4xl text-white bg-green200 py-4 px-8 absolute top-[-7%] transform translate-y-1/2">
+        <h1 className="font-bold text-4xl text-white bg-green200 py-4 px-8 absolute top-[-7%] transform translate-y-1/2 text-center">
           EQUIPE ESPECIALIZADA CORE
         </h1>
-        <div className="flex flex-col items-center w-[1300px] mt-72 text-center">
-          <p className="text-blue300 font-bold text-3xl">
+        <div className="flex flex-col items-center w-screen md:px-20 lg:px-40 mt-44 lg:mt-72 text-center">
+          <p className="text-blue300 font-bold text-xl md:text-3xl">
             Nossa equipe multidisciplinar é composta por profissionais altamente
             <br />
             qualificados e comprometidos, com vasta experiência em suas
@@ -141,7 +141,7 @@ export function Institucional() {
             nas áreas de estratégia, governança e DEI, bem como consultores
             sistêmicos pessoais e organizacionais.
           </p>
-          <p className="text-blue300 text-xl mt-6">
+          <p className="text-blue300 text-xl mt-6 md:inline hidden">
             Integrantes da nossa equipe também são convidados para participar de
             comitês de elaboração de normas, procedimentos e avaliações para
             certificações, prêmios e reconhecimentos por órgãos renomados como
@@ -150,11 +150,11 @@ export function Institucional() {
           </p>
         </div>
       </div>
-      <div className="h-[1200px] bg-green200 relative flex flex-col items-center">
+      <div className="xl:h-[1200px] pb-10 bg-green200 relative flex flex-col items-center">
         <h1 className="font-bold text-4xl text-white bg-blue300 py-4 px-8 absolute top-[-6%] transform translate-y-1/2">
           DIFERENCIAS CORE
         </h1>
-        <div className="grid-cols-3 grid-rows-2 grid gap-x-8 gap-y-12 mt-52">
+        <div className="xl:grid-cols-3 xl:grid-rows-2 grid gap-x-8 gap-y-12 mt-52">
           <div className="bg-green300 w-[460px] h-[240px] rounded-3xl flex flex-col items-center text-center justify-center gap-5">
             <h2 className="font-bold text-2xl text-white100">
               Inovação e Modernidade
@@ -166,47 +166,46 @@ export function Institucional() {
           </div>
           <div className="bg-green300 w-[460px] h-[240px] rounded-3xl flex flex-col items-center text-center justify-center gap-5">
             <h2 className="font-bold text-2xl text-white100">
-              Inovação e Modernidade
+              Equipe Multidisciplinar
             </h2>
             <p className="text-base text-white100">
-              Compromisso com a Inovação e Tecnologia na implementação de
-              soluções avançadas para melhorar processos e resultados.
+              Profissionais altamente qualificados.
             </p>
           </div>
           <div className="bg-green300 w-[460px] h-[240px] rounded-3xl flex flex-col items-center text-center justify-center gap-5">
             <h2 className="font-bold text-2xl text-white100">
-              Inovação e Modernidade
+              Personalização e Adaptabilidade
             </h2>
             <p className="text-base text-white100">
-              Compromisso com a Inovação e Tecnologia na implementação de
-              soluções avançadas para melhorar processos e resultados.
+              Capacidade de adaptar soluções às necessidades específicas de cada
+              cliente, proporcionando serviços personalizados e eficazes.
             </p>
           </div>
           <div className="bg-green300 w-[460px] h-[240px] rounded-3xl flex flex-col items-center text-center justify-center gap-5">
             <h2 className="font-bold text-2xl text-white100">
-              Inovação e Modernidade
+              Conexões Estratégicas
             </h2>
             <p className="text-base text-white100">
-              Compromisso com a Inovação e Tecnologia na implementação de
-              soluções avançadas para melhorar processos e resultados.
+              Parcerias com outras empresas e instituições para fortalecer a
+              capacidade e oferecer soluções mais completas aos clientes.
             </p>
           </div>
           <div className="bg-green300 w-[460px] h-[240px] rounded-3xl flex flex-col items-center text-center justify-center gap-5">
             <h2 className="font-bold text-2xl text-white100">
-              Inovação e Modernidade
+              Ampla Gama de Serviços
             </h2>
             <p className="text-base text-white100">
-              Compromisso com a Inovação e Tecnologia na implementação de
-              soluções avançadas para melhorar processos e resultados.
+              Oferta de uma variedade de soluções educacionais e serviços de
+              consultoria, assessoria e gestão em diferentes áreas de atuação.
             </p>
           </div>
           <div className="bg-green300 w-[460px] h-[240px] rounded-3xl flex flex-col items-center text-center justify-center gap-5">
             <h2 className="font-bold text-2xl text-white100">
-              Inovação e Modernidade
+              Excelência em Serviços
             </h2>
             <p className="text-base text-white100">
-              Compromisso com a Inovação e Tecnologia na implementação de
-              soluções avançadas para melhorar processos e resultados.
+              Compromisso com a qualidade e busca constante pela excelência em
+              todos os serviços oferecidos.
             </p>
           </div>
         </div>

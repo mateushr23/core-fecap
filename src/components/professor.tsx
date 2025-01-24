@@ -11,22 +11,24 @@ export function Professor({ variant }: ProfessorProps) {
     <div
       className={`h-[1200px] ${professor?.cores.div} flex flex-col items-center`}
     >
-      <h1 className="font-bold text-white bg-green200 w-[560px] py-4 text-3xl text-center mt-52 mb-24">
+      <h1 className="font-bold text-white bg-green200 w-screen md:w-[560px] py-4 text-3xl text-center mt-52 mb-24">
         {professor?.titulo}
       </h1>
       <div
-        className={`flex w-[1110px] h-[520px] items-center text-center ${professor?.cores.background}`}
+        className={`flex lg:w-[1110px] pb-4 lg:h-[520px] items-center text-center ${professor?.cores.background}`}
       >
         <img
-          className="h-full flex-grow"
+          className="h-full flex-grow hidden lg:inline"
           src={professor?.img}
           alt="Professor Luciano Nurnberg"
         />
         <div
-          className={`w-[790px] h-full text-justify ${professor?.cores.text} `}
+          className={`lg:w-[790px] h-full  text-justify ${professor?.cores.text} `}
         >
           <h1 className="ml-6 mt-6 font-bold text-3xl">{professor?.nome}</h1>
-          <p className="mt-8 ml-6 mr-20 text-base">{professor?.descricao}</p>
+          <p className="mt-8 ml-6 mr-6 lg:mr-20 text-base">
+            {professor?.descricao}
+          </p>
           <div className="flex gap-4 ml-6 mt-5">
             {professor?.linkedin && (
               <a

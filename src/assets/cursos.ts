@@ -1001,7 +1001,7 @@ export const cursoData: Data[] = [
 
   //CURSOS MBA---------------------------------------------------
   {
-    id: "1",
+    id: "31",
     variant: "ademar",
     mbaLink: "https://www.fecap.br/mba/mba-accounting/",
     cardImg: cardGestao1,
@@ -1018,7 +1018,7 @@ export const cursoData: Data[] = [
       "O MBA Accounting é voltado para gestores ou futuros gestores com experiência profissional superior a 3 anos. São profissionais que buscam o aperfeiçoamento contínuo para enfrentar os desafios das organizações e assumir posições de destaque no mercado de trabalho. Os cursos de pós-graduação da FECAP permitem aperfeiçoamento profissional e desenvolvimento pessoal, capacitando o aluno para atuar com integridade em uma área específica no mercado de trabalho.",
   },
   {
-    id: "2",
+    id: "32",
     variant: "jose",
     mbaLink: "https://www.fecap.br/mba/mba-em-agribusiness-marketing-commerce/",
     cardImg: cardGestao2,
@@ -1035,7 +1035,7 @@ export const cursoData: Data[] = [
       "Preparado com as competências necessárias para ser um gestor em organizações do complexo do agronegócio, no antes, dentro ou pós porteira das fazendas, da mesma forma no cooperativismo, associativismo, ONGs, mídia, nas funções públicas e/ou privadas, em organizações da sociedade civil , com valor agregado de práticas de comércio para aplicação em iniciativas próprias empreendedoras e/ou desenvolvimento de suas carreiras.",
   },
   {
-    id: "3",
+    id: "33",
     variant: "roberto",
     mbaLink: "https://www.fecap.br/mba/mba-em-gestao-de-negocios/",
     cardImg: cardGestao3,
@@ -1052,7 +1052,7 @@ export const cursoData: Data[] = [
       "Os cursos de pós-graduação da FECAP permitem aperfeiçoamento profissional e desenvolvimento pessoal, capacitando o aluno para atuar com integridade em uma área específica no mercado de trabalho. Além disso, nossos cursos de especialização com metodologia empreendedora foram destaques no Guia do Estudante e classificados entre os melhores do Brasil, pela revista Você S/A.",
   },
   {
-    id: "4",
+    id: "34",
     variant: "sergio",
     mbaLink: "https://www.fecap.br/mba/mba-em-gestao-de-riscos-e-compliance/",
     cardImg: cardGestao1,
@@ -1069,7 +1069,7 @@ export const cursoData: Data[] = [
       "A infraestrutura da FECAP atende a todas as necessidades do aluno durante o curso, com laboratório de informática de alta tecnologia, salas de aula equipadas e uma biblioteca com acervo de mais de 60 mil exemplares.",
   },
   {
-    id: "5",
+    id: "35",
     variant: "marcelo",
     mbaLink: "https://www.fecap.br/mba/mba-executivo-em-financas/",
     cardImg: cardGestao2,

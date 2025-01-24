@@ -3,7 +3,7 @@ import whatsapp from "../../assets/images/whatsapp.png"
 import settingsLines from "../../assets/images/setting-lines.png"
 import tutorial from "../../assets/images/tutorial.png"
 import conquest from "../../assets/images/conquest.png"
-import bannerC5 from "../../assets/images/banner-c5.png"
+// import bannerC5 from "../../assets/images/banner-c5.png"
 import { BannerEscola } from "../../components/banner-escola"
 import agronecociosBg from "../../assets/images/agronegocios-background.png"
 import gestaoBg from "../../assets/images/gestao-background.png"
@@ -23,18 +23,18 @@ export function InCompany() {
     <div>
       <div className="relative">
         <img src={bannerIncompany} />
-        <div className="absolute inset-0 flex flex-col justify-center text-blue300 ml-80">
-          <div className="text-6xl font-light">
+        <div className="ml-4 md:ml-12 absolute inset-0 flex flex-col justify-center text-blue300 lg:ml-12">
+          <div className=" md:text-4xl font-light">
             <h1>TREINAMENTOS</h1>
-            <h1 className="font-bold mt-4">IN COMPANY</h1>
+            <h1 className="font-bold lg:mt-4">IN COMPANY</h1>
           </div>
-          <div className="w-[730px] mt-12">
-            <h2 className="text-3xl font-bold">
+          <div className="mt-2 w-[600px] lg:mt-12">
+            <h2 className="text-xs w-56 md:w-72 lg:w-auto md:text-xl font-bold lg:mb-4">
               Os Treinamentos In Company são soluções de aprendizagem
               personalizadas para atender às necessidades específicas da sua
               empresa.
             </h2>
-            <p className="text-xl mt-8">
+            <p className="hidden text-xs lg:text-xl lg:inline">
               Nosso objetivo é atuar como parceiros estratégicos das
               organizações, oferecendo soluções educacionais customizadas para
               desenvolver habilidades técnicas, práticas e comportamentais em
@@ -44,46 +44,46 @@ export function InCompany() {
           </div>
           <button
             onClick={handleWhatsappRedirect}
-            className="border-2 border-green200 rounded-xl w-[250px] items-center flex justify-center gap-4 p-3 text-green200 font-bold text-base mt-16"
+            className=" mt-1 border-2 border-green200 rounded-xl w-36 py-1  lg:w-[250px] items-center flex justify-center gap-4 lg:p-3 text-green200 font-bold text-base lg:mt-16"
           >
             <img src={whatsapp} />
-            Enviar Whatsapp
+            Whatsapp
           </button>
         </div>
       </div>
-      <div className="h-[1040px] bg-blue300 flex flex-col items-center justify-center text-white text-justify hyphens-auto">
-        <h1 className="text-4xl font-light">
+      <div className="h-[700px] lg:h-[1040px] bg-blue300 flex flex-col items-center justify-center text-white text-center md:text-justify  md:hyphens-auto">
+        <h1 className="text-4xl font-light text-center m-4">
           BENEFÍCIOS DOS{" "}
           <span className="font-bold">TREINAMENTOS IN COMPANY</span>
         </h1>
-        <div className="flex flex-col gap-16 mt-24">
-          <div className="flex gap-20 items-center">
-            <img src={settingsLines} />
+        <div className="flex flex-col mt-10 md:mt-14 gap-10 md:m-10">
+          <div className="flex flex-col md:flex-row gap-8 lg:gap-10 items-center ">
+            <img className="w-14  lg:w-auto" src={settingsLines} />
             <div className="w-[700px]">
-              <h1 className="text-2xl font-bold">Personalização</h1>
-              <p className="text-xl text-white mt-7">
+              <h1 className="lg:text-2xl font-bold lg:mb-4">Personalização</h1>
+              <p className="lg:text-xl text-white  hidden md:inline">
                 Cada treinamento é cuidadosamente adaptado para refletir a
                 realidade, os desafios e as particularidades da sua empresa,
                 garantindo maior relevância e eficácia.
               </p>
             </div>
           </div>
-          <div className="flex gap-20 items-center">
-            <img src={tutorial} />
+          <div className="flex flex-col md:flex-row gap-8 lg:gap-10 items-center">
+            <img className="w-14 lg:w-auto" src={tutorial} />
             <div className="w-[700px]">
-              <h1 className="text-2xl font-bold">Flexibilidade</h1>
-              <p className="text-xl text-white mt-7">
+              <h1 className="lg:text-2xl font-bold">Flexibilidade</h1>
+              <p className="lg:text-xl text-white mt-7 hidden md:inline">
                 Oferecemos formatos presenciais e online ao vivo, permitindo que
                 sua equipe participe de qualquer localidade, sem a necessidade
                 de deslocamento.
               </p>
             </div>
           </div>
-          <div className="flex gap-20 items-center">
-            <img src={conquest} />
+          <div className="flex flex-col md:flex-row gap-8 lg:gap-10 items-center">
+            <img className="w-14  lg:w-auto" src={conquest} />
             <div className="w-[700px]">
-              <h1 className="text-2xl font-bold">Engajamento</h1>
-              <p className="text-xl text-white mt-7">
+              <h1 className="lg:text-2xl font-bold">Engajamento</h1>
+              <p className="lg:text-xl text-white mt-7 hidden md:inline">
                 Utilizamos metodologias ativas e participativas, estruturadas na
                 prática e fundamentadas em situações reais. Com foco no
                 desenvolvimento de competências e na construção do conhecimento,
@@ -94,7 +94,7 @@ export function InCompany() {
           </div>
         </div>
       </div>
-      <div className="relative">
+      {/* <div className="relative">
         <img src={bannerC5} />
         <div className="absolute inset-0 text-white flex flex-col items-center justify-center">
           <div>
@@ -155,33 +155,33 @@ export function InCompany() {
             </div>
           </div>
         </div>
-      </div>
-      <div className="h-[690px] bg-blue300 text-white flex flex-col items-center ">
-        <h1 className="font-light text-4xl mt-40">
+      </div> */}
+      <div className="h-[1100px] md:h-[690px] lg:h-[800px] bg-blue300 text-white flex flex-col text-center justify-center items-center ">
+        <h1 className="font-light text-4xl">
           ÁREAS DE <span className="font-bold">ATUAÇÃO</span>
         </h1>
-        <p className="text-xl mt-10">
+        <p className="lg:text-xl mx-4 mb-10 mt-10">
           Nossos treinamentos abrangem áreas estratégicas para o desenvolvimento
           organizacional:
         </p>
-        <div className="flex gap-14 mt-40">
-          <div className="relative">
-            <img src={agronecociosBg} />
-            <div className="absolute inset-0 flex flex-col mt-56 items-center">
+        <div className="flex flex-col md:flex-row gap-14 lg:m-10">
+          <div className="relative ">
+            <img className="w-80 lg:w-auto" src={agronecociosBg} />
+            <div className="absolute inset-0 flex flex-col justify-center items-center">
               <h1 className="font-bold text-3xl">Agronegócios</h1>
               <div className="h-1 w-[100px] bg-green200 mt-3" />
-              <p className="text-xl w-[350px] text-center mt-3">
+              <p className="text-lg w-[350px] text-center mt-3 hidden lg:inline">
                 Soluções direcionadas ao setor agrícola, atendendo demandas
                 específicas de sustentabilidade, inovação e gestão.
               </p>
             </div>
           </div>
           <div className="relative">
-            <img src={gestaoBg} />
-            <div className="absolute inset-0 flex flex-col mt-56 items-center">
+            <img className="w-80 lg:w-auto" src={gestaoBg} />
+            <div className="absolute inset-0 flex flex-col justify-center items-center">
               <h1 className="font-bold text-3xl">Gestão e Negócios</h1>
-              <div className="h-1 w-[100px] bg-green200 mt-3" />
-              <p className="text-xl w-[430px] text-center mt-3">
+              <div className="h-1 w-[100px] bg-green200 mt-3 " />
+              <p className="text-lg w-[430px] text-center mt-3 hidden lg:inline">
                 Abrange um amplo espectro de competências organizacionais,
                 incluindo: Administração, Desenvolvimento Comportamental,
                 Logística, Liderança, Meio Ambiente, Marketing Vendas, Recursos
@@ -191,13 +191,17 @@ export function InCompany() {
           </div>
         </div>
       </div>
-      <div className="h-[1800px] bg-blue400 text-white flex flex-col justify-center items-center">
-        <div className="flex justify-center h-[670px] w-full">
-          <div className="w-[980px] flex flex-col items-center justify-center">
-            <div>
-              <h1 className="font-light text-6xl ">NOSSO</h1>
-              <h1 className="font-bold text-6xl mt-4">DIFERENCIAL</h1>
-              <p className="text-3xl w-[630px] mt-12">
+      <div className="h-[1400px] bg-blue400 text-white flex flex-col justify-center items-center">
+        <div className="flex flex-col lg:flex-row justify-center h-[670px] w-full">
+          <div className="xl:w-[980px] xl:ml-8 flex flex-col items-center justify-center">
+            <div className="m-4">
+              <h1 className="font-light text-3xl lg:text-5xl xl:text-6xl ">
+                NOSSO
+              </h1>
+              <h1 className="font-bold text-3xl lg:text-5xl xl:text-6xl mt-2 xl:mt-4">
+                DIFERENCIAL
+              </h1>
+              <p className="xl:text-3xl lg:text-xl xl:w-[630px] mt-8 xl:mt-12 pb-20">
                 Atuamos tanto com{" "}
                 <span className="font-bold">
                   empresas públicas quanto privadas
@@ -206,26 +210,26 @@ export function InCompany() {
               </p>
             </div>
           </div>
-          <div className="flex-grow bg-green200 flex flex-col justify-center gap-16">
-            <div className="w-[570px] ml-24">
+          <div className="flex-grow bg-green200 flex flex-col justify-center xl:gap-16 py-4 ">
+            <div className=" p-4 xl:ml-12">
               <h1 className="font-bold text-2xl">
                 Programas de Educação Continuada
               </h1>
-              <p className="text-xl mt-7">
+              <p className="xl:text-xl mt-7">
                 Capacitação contínua para equipes, promovendo atualização e
                 desenvolvimento constantes.
               </p>
             </div>
-            <div className="w-[570px] ml-24">
+            <div className=" xl:ml-12 p-4">
               <h1 className="font-bold text-2xl">Faculdade Corporativa</h1>
-              <p className="text-xl mt-7">
+              <p className="xl:text-xl mt-7">
                 Criação e gestão de academias de aprendizagem internas,
                 alinhadas às estratégias corporativas.
               </p>
             </div>
-            <div className="w-[570px] ml-24">
+            <div className="xl:ml-12 p-4">
               <h1 className="font-bold text-2xl">Consultoria</h1>
-              <p className="text-xl mt-7">
+              <p className="xl:text-xl mt-7">
                 Diagnóstico e implementação de estratégias educacionais e
                 organizacionais, focadas em resultados tangíveis.
               </p>
@@ -233,7 +237,7 @@ export function InCompany() {
           </div>
         </div>
         <div className="flex flex-col items-center">
-          <p className="w-[1300px] mt-44 text-3xl text-center ">
+          <p className="xl:w-[1300px] mt-44 xl:text-3xl text-center">
             Entre em <span className="font-bold">contato conosco</span> para
             desenvolver uma solução que atenda às necessidades específicas da
             sua
@@ -242,7 +246,7 @@ export function InCompany() {
           </p>
           <button
             onClick={handleWhatsappRedirect}
-            className="relative top-40 border-2 border-green200 rounded-xl w-[250px] items-center flex justify-center gap-4 p-3 text-green200 font-bold text-base"
+            className="relative top-10 xl:top-40 border-2 border-green200 rounded-xl w-[250px] items-center flex justify-center gap-4 p-3 text-green200 font-bold text-base"
           >
             <img src={whatsapp} />
             Enviar Whatsapp

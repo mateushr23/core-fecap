@@ -59,13 +59,13 @@ export function CursoCurta() {
           src={curso?.banner}
           alt="Banner curso curta duracao"
         />
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white font-bold text-4xl text-center">
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white font-bold lg:text-4xl text-center">
           {curso?.nome.toUpperCase()}
         </div>
       </div>
-      <div className="flex">
-        <div className="w-[50%] h-[920px] bg-white300 flex flex-col items-center justify-center text-center ">
-          <div className="w-[700px]">
+      <div className="flex flex-col lg:flex-row">
+        <div className="w-screen lg:h-[1000px] bg-white300 flex flex-col items-center justify-center text-center p-4 ">
+          <div className="p-4">
             <h1 className="text-blue300 font-bold text-3xl text-start">
               Sobre o Curso
             </h1>
@@ -78,55 +78,57 @@ export function CursoCurta() {
             <p className="text-blue300 text-xl text-justify mt-4 whitespace-pre-line">
               {curso?.oQueLeva}
             </p>
-            <h1 className="text-blue300 font-bold text-3xl text-start mt-4">
+            <h1 className="text-blue300 font-bold text-3xl text-start mt-4 hyphens-auto">
               Para quem é este Curso
             </h1>
-            <p className="text-blue300 text-xl text-justify mt-4 whitespace-pre-line">
+            <p className="text-blue300 text-xl text-justify mt-4 whitespace-pre-line hyphens-auto">
               {curso?.paraQuem}
             </p>
           </div>
         </div>
         <div className="bg-blue300 flex-grow">
-          <div className="flex flex-col mt-28 ml-28 gap-16">
-            <div className="flex gap-8">
-              <img src={relogio} />
+          <div className="flex flex-col mt-8 justify-center items-center gap-16 lg:items-start">
+            <div className="flex gap-8 w-screen items-center ml-20">
+              <img className="w-14" src={relogio} />
               <div className="ml-4">
                 <h2 className="text-xl text-white">Carga horária</h2>
-                <h3 className="text-2xl text-white font-bold">
+                <h3 className="lg:text-2xl text-white font-bold">
                   {curso?.carga}
                 </h3>
               </div>
             </div>
-            <div className="flex gap-8">
-              <img src={calendario} />
-              <div className="ml-2">
+            <div className="flex gap-8 w-screen items-center ml-20">
+              <img className="w-14" src={calendario} />
+              <div className="ml-2 w-[200px]">
                 <h2 className="text-xl text-white">Dias e horários</h2>
-                <h3 className="text-2xl text-white font-bold">{curso?.data}</h3>
+                <h3 className="lg:text-2xl text-white font-bold">
+                  {curso?.data}
+                </h3>
               </div>
             </div>
-            <div className="flex gap-8">
-              <img src={pin} />
-              <div className="ml-8">
+            <div className="flex gap-8 w-screen items-center ml-20">
+              <img className="w-14" src={pin} />
+              <div className="ml-2">
                 <h2 className="text-xl text-white">Modalidade</h2>
-                <h3 className="text-2xl text-white font-bold">
+                <h3 className="lg:text-2xl text-white font-bold">
                   {curso?.modalidade}
                 </h3>
               </div>
             </div>
-            <div className="flex gap-8">
-              <img src={dinheiro} />
+            <div className="flex gap-8 w-screen items-center ml-20">
+              <img className="w-14" src={dinheiro} />
               <div className="ml-2">
                 <h2 className="text-xl text-white">Valores</h2>
-                <h3 className="text-2xl text-white font-bold">
+                <h3 className="lg:text-2xl text-white font-bold">
                   Consultar valores
                 </h3>
               </div>
             </div>
-            <div className="flex gap-8">
-              <img src={escrita} />
-              <div className="ml-3">
+            <div className="flex gap-8 w-screen items-center ml-20">
+              <img className="w-14" src={escrita} />
+              <div className="ml-2 w-[200px]">
                 <h2 className="text-xl text-white">Período de Inscrição</h2>
-                <h3 className="text-2xl text-white font-bold">
+                <h3 className="lg:text-2xl text-white font-bold">
                   {curso?.inscricao}
                 </h3>
               </div>
@@ -134,7 +136,7 @@ export function CursoCurta() {
           </div>
           <button
             onClick={handleWhatsappRedirect}
-            className="mt-20 ml-28 w-[280px] bg-blue300 text-green200 border border-green200 hover:bg-green200 hover:text-blue300 transition delay-80 text-xl font-bold  py-4 rounded-2xl"
+            className="lg:mt-20 mt-10 mb-10 ml-10 lg:ml-28 w-[280px] bg-blue300 text-green200 border border-green200 hover:bg-green200 hover:text-blue300 transition delay-80 text-xl font-bold  py-4 rounded-2xl"
           >
             INSCREVA-SE
           </button>
@@ -145,7 +147,7 @@ export function CursoCurta() {
           <h1 className="text-white bg-green200 font-bold w-[560px] py-5 text-4xl text-center mt-52 mb-20">
             MÓDULOS DO CURSO
           </h1>
-          <div className="flex flex-col gap-2 w-[1100px]">
+          <div className="flex flex-col gap-2 m-4 lg:w-[1100px]">
             {curso?.modulos?.map((modulo, index) => (
               <div
                 key={index}
@@ -185,11 +187,11 @@ export function CursoCurta() {
       </div>
       <Professor variant={curso?.variant} />
       <Pagamentos />
-      <div className="h-[650px] bg-white300 flex flex-col items-center ">
+      <div className="h-[650px] bg-white300 flex flex-col items-center text-center">
         <h1 className="font-bold text-4xl bg-green200 p-4 text-white mt-52">
           SUA CARREIRA MERECE UM IMPULSO
         </h1>
-        <p className="text-blue300 text-xl mt-12 w-[915px] text-center">
+        <p className="text-blue300 text-xl mt-12 lg:w-[915px] text-center">
           Venha para a Core e tenha os melhores especialistas para te ajudar a
           subir de nível, com estrutura pensada em você e todo suporte que
           precisar.
@@ -197,7 +199,7 @@ export function CursoCurta() {
 
         <button
           onClick={handleWhatsappRedirect}
-          className="border border-green200 hover:bg-green200 hover:text-white300 transition delay-80 font-bold text-xl bg-white300 px-8 py-3 rounded-2xl text-green200 mt-16"
+          className="border border-green200 hover:bg-green200 hover:text-white300 transition delay-80 font-bold text-xl bg-white300 px-8 py-3 rounded-2xl text-green200 mt-8 "
         >
           INSCREVA-SE
         </button>
