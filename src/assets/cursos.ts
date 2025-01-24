@@ -34,77 +34,77 @@ export interface Data {
 
 export const cursoData: Data[] = [
   // CURSOS CURTA DURACAO -----------------------------------------------------------------------------------------------
-  {
-    id: "1",
-    banner: bannerCurta1,
-    categoriaCurta: "gestao",
-    cardImg: cardGestao1,
-    cardDescricao:
-      "Este curso foi desenvolvido para profissionais em início de carreira que buscam crescimento rápido e sólido no mundo corporativo. Ele apresenta as principais ferramentas de g",
-    cardTag1: "CURTA-DURAÇÃO",
-    cardTag2: "EAD",
-    cardTag3: "PRESENCIAL",
-    cardTag4: "GESTÃO",
-    variant: "renato",
-    categoria: "curta",
-    nome: "Ferramentas e Estratégias Essenciais para Iniciar Sua Jornada no Mundo Corporativo",
-    carga: "30 horas",
-    modalidade: "Aulas remotas ao vivo",
-    data: "Consulte-nos para mais informações",
-    inscricao: "De 03 de fevereiro a 03 de março de 2025",
-    sobre:
-      "Este curso foi desenvolvido para profissionais em início de carreira que buscam crescimento rápido e sólido no mundo corporativo. Ele apresenta as principais ferramentas de governança e projetos, com foco em controles internos, fluxos de melhoria e estratégias de redução de custos. Com uma abordagem prática, o curso oferece uma base sólida para capacitar os participantes a se tornarem agentes de transformação nas empresas, contribuindo para o sucesso organizacional e o próprio desenvolvimento profissional.",
-    oQueLeva:
-      "Entendimento das bases de processos e sua aplicação no dia a dia corporativo.\n Conhecimento inicial sobre projetos, suas fases e ferramentas de controle.\n Estratégias práticas de redução de custos e melhoria contínua.\n Ferramentas essenciais para alinhar a gestão de pessoas e negócios.",
-    paraQuem:
-      "Profissionais recém-formados que desejam iniciar sua carreira no mundo corporativo.\n Pessoas em busca de ferramentas práticas e estratégicas para o mercado de trabalho.\n Indivíduos interessados em compreender os fundamentos de processos, projetos e cultura organizacional.",
-    modulos: [
-      {
-        titulo: "Módulo 1 - Ferramentas de Processos",
-        topicos: [
-          "O que são processos internos e externos.",
-          "A importância dos processos de negócios para a empresa.",
-          "Gestão de indicadores: quem não gerencia processos, não gerencia indicadores.",
-        ],
-      },
-      {
-        titulo: "Módulo 2 - Ferramentas de Projetos",
-        topicos: [
-          "O que é um projeto e sua relevância.",
-          "Entendendo as fases de um projeto.",
-          "Integração entre processos e projetos.",
-          "Comunicação e empatia no gerenciamento de projetos.",
-        ],
-      },
-      {
-        titulo: "Módulo 3 - Melhoria Contínua",
-        topicos: [
-          "Surgimento e conceito de melhoria contínua.",
-          "Qualidade em produtos e serviços: fundamentos essenciais.",
-          "Principais ferramentas e certificações.",
-          "A importância da melhoria contínua para o desenvolvimento de sua carreira.",
-        ],
-      },
-      {
-        titulo:
-          "Módulo 4 - Cultura Organizacional e seu Impacto na Estratégia do Negócio",
-        topicos: [
-          "Conceitos fundamentais de cultura organizacional.",
-          "Como a cultura impulsiona a estratégia organizacional.",
-          "Premissas e pilares da cultura organizacional.",
-          "Diagnóstico e implementação de mudanças culturais.",
-          "O papel do Business Partner como facilitador da cultura desejada.",
-        ],
-      },
-    ],
-  },
+  // {
+  //   id: "1",
+  //   banner: bannerCurta1,
+  //   categoriaCurta: "gestao",
+  //   cardImg: cardGestao1,
+  //   cardDescricao:
+  //     "Este curso foi desenvolvido para profissionais em início de carreira que buscam crescimento rápido e sólido no mundo corporativo. Ele apresenta as principais ferramentas de g",
+  //   cardTag1: "CURTA-DURAÇÃO",
+  //   cardTag2: "EAD",
+  //   cardTag3: "PRESENCIAL",
+  //   cardTag4: "GESTÃO",
+  //   variant: "renato",
+  //   categoria: "curta",
+  //   nome: "Ferramentas e Estratégias Essenciais para Iniciar Sua Jornada no Mundo Corporativo",
+  //   carga: "30 horas",
+  //   modalidade: "Aulas remotas ao vivo",
+  //   data: "Consulte-nos para mais informações",
+  //   inscricao: "De 03 de fevereiro a 03 de março de 2025",
+  //   sobre:
+  //     "Este curso foi desenvolvido para profissionais em início de carreira que buscam crescimento rápido e sólido no mundo corporativo. Ele apresenta as principais ferramentas de governança e projetos, com foco em controles internos, fluxos de melhoria e estratégias de redução de custos. Com uma abordagem prática, o curso oferece uma base sólida para capacitar os participantes a se tornarem agentes de transformação nas empresas, contribuindo para o sucesso organizacional e o próprio desenvolvimento profissional.",
+  //   oQueLeva:
+  //     "Entendimento das bases de processos e sua aplicação no dia a dia corporativo.\n Conhecimento inicial sobre projetos, suas fases e ferramentas de controle.\n Estratégias práticas de redução de custos e melhoria contínua.\n Ferramentas essenciais para alinhar a gestão de pessoas e negócios.",
+  //   paraQuem:
+  //     "Profissionais recém-formados que desejam iniciar sua carreira no mundo corporativo.\n Pessoas em busca de ferramentas práticas e estratégicas para o mercado de trabalho.\n Indivíduos interessados em compreender os fundamentos de processos, projetos e cultura organizacional.",
+  //   modulos: [
+  //     {
+  //       titulo: "Módulo 1 - Ferramentas de Processos",
+  //       topicos: [
+  //         "O que são processos internos e externos.",
+  //         "A importância dos processos de negócios para a empresa.",
+  //         "Gestão de indicadores: quem não gerencia processos, não gerencia indicadores.",
+  //       ],
+  //     },
+  //     {
+  //       titulo: "Módulo 2 - Ferramentas de Projetos",
+  //       topicos: [
+  //         "O que é um projeto e sua relevância.",
+  //         "Entendendo as fases de um projeto.",
+  //         "Integração entre processos e projetos.",
+  //         "Comunicação e empatia no gerenciamento de projetos.",
+  //       ],
+  //     },
+  //     {
+  //       titulo: "Módulo 3 - Melhoria Contínua",
+  //       topicos: [
+  //         "Surgimento e conceito de melhoria contínua.",
+  //         "Qualidade em produtos e serviços: fundamentos essenciais.",
+  //         "Principais ferramentas e certificações.",
+  //         "A importância da melhoria contínua para o desenvolvimento de sua carreira.",
+  //       ],
+  //     },
+  //     {
+  //       titulo:
+  //         "Módulo 4 - Cultura Organizacional e seu Impacto na Estratégia do Negócio",
+  //       topicos: [
+  //         "Conceitos fundamentais de cultura organizacional.",
+  //         "Como a cultura impulsiona a estratégia organizacional.",
+  //         "Premissas e pilares da cultura organizacional.",
+  //         "Diagnóstico e implementação de mudanças culturais.",
+  //         "O papel do Business Partner como facilitador da cultura desejada.",
+  //       ],
+  //     },
+  //   ],
+  // },
   {
     id: "2",
     banner: bannerCurta2,
     categoriaCurta: "gestao",
     cardImg: cardGestao2,
     cardDescricao:
-      "A eficiência logística se constrói com organização, gestão estratégica, otimização de processos e controle eficaz.",
+      "Otimize processos logísticos com gestão estratégica, controle eficaz e eficiência operacional.",
     cardTag1: "CURTA-DURAÇÃO",
     cardTag2: "EAD",
     cardTag3: "PRESENCIAL",
@@ -165,7 +165,8 @@ export const cursoData: Data[] = [
     banner: bannerCurta3,
     categoriaCurta: "gestao",
     cardImg: cardGestao3,
-    cardDescricao: "teste",
+    cardDescricao:
+      "Cresça e inove com estratégias práticas para uma gestão eficiente e resultados sustentáveis.",
     cardTag1: "CURTA-DURAÇÃO",
     cardTag2: "EAD",
     cardTag3: "PRESENCIAL",
@@ -241,7 +242,7 @@ export const cursoData: Data[] = [
     categoriaCurta: "gestao",
     cardImg: cardGestao1,
     cardDescricao:
-      "A arte de vender e negociar exige preparo, estratégias bem definidas e foco em resultados.",
+      "Venda mais e melhor com técnicas de negociação, planejamento estratégico e foco em resultados.",
     cardTag1: "CURTA-DURAÇÃO",
     cardTag2: "EAD",
     cardTag3: "PRESENCIAL",
@@ -307,7 +308,8 @@ export const cursoData: Data[] = [
     banner: bannerCurta2,
     categoriaCurta: "gestao",
     cardImg: cardGestao2,
-    cardDescricao: "teste",
+    cardDescricao:
+      "Gerencie desafios organizacionais com inteligência emocional e soluções eficazes.",
     cardTag1: "CURTA-DURAÇÃO",
     cardTag2: "EAD",
     cardTag3: "PRESENCIAL",
@@ -378,7 +380,8 @@ export const cursoData: Data[] = [
     banner: bannerCurta3,
     categoriaCurta: "gestao",
     cardImg: cardGestao3,
-    cardDescricao: "teste",
+    cardDescricao:
+      "Desenvolva estruturas salariais eficazes para retenção de talentos e crescimento organizacional.",
     cardTag1: "CURTA-DURAÇÃO",
     cardTag2: "EAD",
     cardTag3: "PRESENCIAL",
@@ -445,7 +448,8 @@ export const cursoData: Data[] = [
     banner: bannerCurta1,
     categoriaCurta: "gestao",
     cardImg: cardGestao1,
-    cardDescricao: "teste",
+    cardDescricao:
+      "Estruture uma área de Gente e Cultura forte, alinhada à estratégia e focada no capital humano.",
     cardTag1: "CURTA-DURAÇÃO",
     cardTag2: "EAD",
     cardTag3: "PRESENCIAL",
@@ -512,7 +516,8 @@ export const cursoData: Data[] = [
     banner: bannerCurta2,
     categoriaCurta: "gestao",
     cardImg: cardGestao2,
-    cardDescricao: "teste",
+    cardDescricao:
+      "Planeje e implemente programas de T&D que impulsionam o crescimento organizacional.",
     cardTag1: "CURTA-DURAÇÃO",
     cardTag2: "EAD",
     cardTag3: "PRESENCIAL",
@@ -579,7 +584,7 @@ export const cursoData: Data[] = [
     categoriaCurta: "gestao",
     cardImg: cardGestao3,
     cardDescricao:
-      "A excelência no atendimento é a combinação de conhecimentos, técnicas, comunicação eficaz, empatia e fidelização de clientes.",
+      "Atenda com excelência, utilizando comunicação eficaz, empatia e fidelização de clientes.",
     cardTag1: "CURTA-DURAÇÃO",
     cardTag2: "EAD",
     cardTag3: "PRESENCIAL",
@@ -645,7 +650,8 @@ export const cursoData: Data[] = [
     banner: bannerCurta1,
     categoriaCurta: "gestao",
     cardImg: cardGestao1,
-    cardDescricao: "teste",
+    cardDescricao:
+      "A Nova NR-1 entra em vigor em 25 de maio de 2025, com mudanças significativas. Sua empresa está preparada para as novas exigências?",
     cardTag1: "CURTA-DURAÇÃO",
     cardTag2: "EAD",
     cardTag3: "PRESENCIAL",
@@ -714,7 +720,8 @@ export const cursoData: Data[] = [
     banner: bannerCurta2,
     categoriaCurta: "gestao",
     cardImg: cardGestao2,
-    cardDescricao: "teste",
+    cardDescricao:
+      "Atraia e selecione talentos com técnicas modernas e estratégias assertivas.",
     cardTag1: "CURTA-DURAÇÃO",
     cardTag2: "EAD",
     cardTag3: "PRESENCIAL",
@@ -780,7 +787,8 @@ export const cursoData: Data[] = [
     banner: bannerCurta3,
     categoriaCurta: "gestao",
     cardImg: cardGestao3,
-    cardDescricao: "teste",
+    cardDescricao:
+      "Desenvolva habilidades para liderar equipes, engajar pessoas e alcançar resultados consistentes.",
     cardTag1: "CURTA-DURAÇÃO",
     cardTag2: "EAD",
     cardTag3: "PRESENCIAL",
@@ -866,7 +874,8 @@ export const cursoData: Data[] = [
     banner: bannerCurta3,
     categoriaCurta: "gestao",
     cardImg: cardGestao3,
-    cardDescricao: "teste",
+    cardDescricao:
+      "Implemente práticas Lean para reduzir desperdícios e promover melhorias contínuas.",
     cardTag1: "CURTA-DURAÇÃO",
     cardTag2: "EAD",
     cardTag3: "PRESENCIAL",
@@ -934,7 +943,8 @@ export const cursoData: Data[] = [
     banner: bannerCurta1,
     categoriaCurta: "gestao",
     cardImg: cardGestao3,
-    cardDescricao: "teste",
+    cardDescricao:
+      "Lidere projetos ágeis com práticas eficientes, colaboração e entregas de valor contínuas.",
     cardTag1: "CURTA-DURAÇÃO",
     cardTag2: "EAD",
     cardTag3: "PRESENCIAL",
@@ -998,6 +1008,82 @@ export const cursoData: Data[] = [
       },
     ],
   },
+  {
+    id: "15",
+    banner: bannerCurta1,
+    categoriaCurta: "gestao",
+    cardImg: cardGestao3,
+    cardDescricao:
+      "Potencialize sua marca com estratégias eficazes para atrair, conquistar e fidelizar clientes.",
+    cardTag1: "CURTA-DURAÇÃO",
+    cardTag2: "EAD",
+    cardTag3: "PRESENCIAL",
+    cardTag4: "GESTÃO",
+    variant: "carminha",
+    categoria: "curta",
+    nome: "MKT - Atração e Conquista de Mercado",
+    carga: "40 horas",
+    modalidade: "Aulas remotas ao vivo",
+    data: "Consulte-nos para mais informações",
+    inscricao: "De 03 de fevereiro a 03 de março de 2025",
+    sobre:
+      "Este curso é ideal para quem deseja aprender os fundamentos do marketing e utilizá-lo como uma ferramenta estratégica. Ele oferece uma introdução completa aos conceitos básicos de marketing, explicando suas diferenças em relação às vendas e destacando sua importância nos negócios atuais. Os participantes aprenderão sobre tendências de mercado, segmentação, ferramentas de marketing e estratégias práticas para atrair, conquistar e fidelizar clientes. Ao final do curso, estarão capacitados a desenvolver e gerenciar um plano de marketing eficaz, aplicável a qualquer área profissional.",
+    oQueLeva:
+      "Conhecimentos e habilidades práticas para atuar no mercado com segurança e estratégia\n Compreensão do conceito de marketing e suas diferenças em relação às vendas.\n Capacidade de analisar tendências e identificar mudanças no mercado.\n Técnicas para segmentar o público-alvo de forma assertiva.\n Métodos para construir e organizar uma base de dados eficiente.\n Conhecimento sobre ferramentas de marketing digital e tradicional.\n Competência para criar um plano de marketing estruturado e colocá-lo em prática.",
+    paraQuem:
+      "O curso é voltado para qualquer pessoa interessada em aprender marketing desde o básico e aplicá-lo no dia a dia para impulsionar seu crescimento no mercado.",
+    modulos: [
+      {
+        titulo: "Módulo 1 - Fundamentos do Marketing",
+        topicos: [
+          "O que é Marketing? Conceitos básicos e definição.",
+          "Diferenças entre Marketing e Vendas.",
+          "O papel estratégico do Marketing no mundo atual.",
+          "Comportamento do consumidor: como entender o que ele quer?",
+          "Os 4Ps do Marketing: Produto, Preço, Praça e Promoção.",
+        ],
+      },
+      {
+        titulo: "Módulo 2 - Cenário de Negócios e Tendências de Mercado",
+        topicos: [
+          "Como identificar tendências e acompanhar mudanças no mercado.",
+          "Análise externa: impacto da economia, tecnologia e cultura.",
+          "Marketing Digital vs. Marketing Tradicional.",
+          "Exemplos práticos de adaptação às mudanças.",
+        ],
+      },
+      {
+        titulo: "Módulo 3 - Segmentação e Público-Alvo",
+        topicos: [
+          "Segmentação de mercado: o que é e como funciona?",
+          "Critérios de segmentação: demográfica, geográfica, psicográfica e comportamental.",
+          "Como definir público-alvo e criar personas.",
+          "Posicionamento no mercado: estratégias para se destacar.",
+          "Casos de sucesso: empresas que segmentaram bem e brilharam.",
+        ],
+      },
+      {
+        titulo: "Módulo 4 - Ferramentas e Técnicas de Marketing",
+        topicos: [
+          "Introdução ao Marketing Digital: SEO, redes sociais, e-mail marketing.",
+          "Ferramentas tradicionais: promoções, eventos e publicidade.",
+          "Construção e gestão de bases de dados.",
+          "CRM (Gestão de Relacionamento com o Cliente) e sua importância.",
+          "Como medir resultados e acompanhar métricas.",
+        ],
+      },
+      {
+        titulo: "Módulo 5 - Desenvolvimento de um Plano de Marketing",
+        topicos: [
+          "O que é um plano de marketing? Estrutura básica e como montar o seu.",
+          "Como fazer uma pesquisa de mercado prática.",
+          "Estabelecendo objetivos e estratégias claras.",
+          "Planejamento de cronograma e orçamento.",
+          "Apresentação de um plano de marketing simples e funcional.",
+        ],
+      },
+    ],
+  },
 
   //CURSOS MBA---------------------------------------------------
   {
@@ -1008,6 +1094,8 @@ export const cursoData: Data[] = [
     cardDescricao:
       "O MBA Accounting da FECAP desenvolve habilidades de liderança nas áreas contábil e financeira, com uma matriz curricular flexível. Oferece condições especiais e conclusão acelerada para formados em áreas específicas pela FECAP.",
     cardTag1: "MBA",
+    cardTag2: "EAD",
+    cardTag3: "Gestão",
     categoria: "mba",
     nome: "MBA ACCOUNTING",
     carga: "480 horas",
@@ -1025,6 +1113,9 @@ export const cursoData: Data[] = [
     cardDescricao:
       "O MBA em Agribusiness é voltado para empreendedores e profissionais de diversas áreas, com foco na gestão do agronegócio, abordando comércio de alimentos, fibras, agroenergia e biocomércio.",
     cardTag1: "MBA",
+    cardTag2: "EAD",
+    cardTag3: "Gestão",
+    cardTag4: "Agro",
     categoria: "mba",
     nome: "MBA em Agribusiness, Marketing & Commerce",
     carga: "380 horas",
@@ -1042,6 +1133,8 @@ export const cursoData: Data[] = [
     cardDescricao:
       "O MBA em Gestão de Negócios prepara alunos para cargos de gestão e direção, com ênfase em práticas empresariais. É ideal para quem busca empreender ou qualificar sua carreira em administração, com certificação da ANAMBA.",
     cardTag1: "MBA",
+    cardTag2: "EAD",
+    cardTag3: "Gestão",
     categoria: "mba",
     nome: "MBA em Gestão de Negócios",
     carga: "480 horas",
@@ -1059,6 +1152,8 @@ export const cursoData: Data[] = [
     cardDescricao:
       "O MBA em Gestão de Riscos e Compliance oferece conhecimentos em gestão de riscos, controles internos e compliance, proporcionando uma formação sólida e multidisciplinar para os alunos.",
     cardTag1: "MBA",
+    cardTag2: "EAD",
+    cardTag3: "Gestão",
     categoria: "mba",
     nome: "MBA em Gestão de Riscos e Compliance",
     carga: "480 horas",
@@ -1076,6 +1171,8 @@ export const cursoData: Data[] = [
     cardDescricao:
       "O MBA Executivo em Finanças da FECAP prepara o aluno para cargos de direção financeira, com foco teórico e prático, oferecendo um aprofundamento sólido em finanças e formando especialistas na área.",
     cardTag1: "MBA",
+    cardTag2: "EAD",
+    cardTag3: "Gestão",
     categoria: "mba",
     nome: "MBA Executivo em Finanças",
     carga: "480 horas",

@@ -2,6 +2,7 @@ import facebook from "../assets/images/facebook2.png"
 import instagram from "../assets/images/instagram2.png"
 import linkedin from "../assets/images/linkedin2.png"
 import coreLogo from "../assets/images/core-logo.png"
+import { Link } from "react-router-dom"
 
 export function Footer() {
   return (
@@ -47,68 +48,107 @@ export function Footer() {
             <h1 className="font-bold text-2xl text-white lg:mb-6">
               CURTA DURAÇÃO
             </h1>
-            <a className="text-base text-white mb-3 hidden lg:inline" href="#">
-              Cursos de curta-duração
-            </a>
-            <a className="text-base text-white mb-3 hidden lg:inline" href="#">
-              Agro Business
-            </a>
-            <a className="text-base text-white mb-3 hidden lg:inline" href="#">
-              Liderança
-            </a>
-            <a className="text-base text-white mb-3 hidden lg:inline" href="#">
-              Contábil
-            </a>
-            <a className="text-base text-white hidden lg:inline" href="#">
-              Sobre In-Company
-            </a>
+            <Link
+              to={"/curso/curta/2"}
+              className="text-base text-white mb-3 hidden lg:inline"
+            >
+              Formação em Logística: Do Abastecimento à Distribuição
+            </Link>
+            <Link
+              to={"/curso/curta/4"}
+              className="text-base text-white mb-3 hidden lg:inline"
+            >
+              Gestão de Vendas e Negociação com Clientes e Fornecedores
+            </Link>
+            <Link
+              to={"/curso/curta/9"}
+              className="text-base text-white mb-3 hidden lg:inline"
+            >
+              Qualidade no Atendimento: Excelência, Inovação e Resultados
+            </Link>
             <h1 className="font-bold text-2xl text-white mt-4 lg:mt-6">
               IN-COMPANY
             </h1>
+            <Link
+              to={"/incompany"}
+              className="text-base text-white mt-4 hidden lg:inline"
+            >
+              Sobre
+            </Link>
           </div>
           <div className="flex flex-col">
             <h1 className="font-bold text-2xl text-white lg:mb-6">MBA</h1>
-            <a className="text-base text-white mb-3 hidden lg:inline" href="#">
-              Parceria FECAP
-            </a>
-            <a className="text-base text-white mb-3 hidden lg:inline" href="#">
-              Cursos disponíveis
-            </a>
-            <a className="text-base text-white hidden lg:inline" href="#">
-              Diferenciais
-            </a>
+            <Link
+              to={"/curso/mba/31"}
+              className="text-base text-white mb-3 hidden lg:inline"
+            >
+              ACCOUNTING
+            </Link>
+            <Link
+              to={"/curso/mba/32"}
+              className="text-base text-white mb-3 hidden lg:inline"
+            >
+              Agribusiness, Marketing & Commerce
+            </Link>
+            <Link
+              to={"/curso/mba/33"}
+              className="text-base text-white hidden lg:inline"
+            >
+              Gestão de Negócios
+            </Link>
+            <Link
+              to={"/curso/mba/34"}
+              className="text-base text-white hidden lg:inline"
+            >
+              Gestão de Riscos e Compliance
+            </Link>
+            <Link
+              to={"/curso/mba/35"}
+              className="text-base text-white hidden lg:inline"
+            >
+              Executivo em Finanças
+            </Link>
             <h1 className="font-bold text-2xl text-white mt-4 lg:mb-6 lg:mt-12">
               TÉCNICOS
             </h1>
             <a className="text-base text-white mb-3 hidden lg:inline" href="#">
-              Cursos técnicos
-            </a>
-            <a className="text-base text-white mb-3 hidden lg:inline" href="#">
               Administração
             </a>
+            <a className="text-base text-white mb-3 hidden lg:inline" href="#">
+              Logística
+            </a>
             <a className="text-base text-white hidden lg:inline" href="#">
-              Agro
+              Recursos Humanos
             </a>
           </div>
           <div className="flex flex-col">
             <h1 className="font-bold text-2xl text-white lg:mb-6">
               INSTITUCIONAL
             </h1>
-            <a className="text-base text-white mb-3 hidden lg:inline" href="#">
+            <Link
+              to={"/institucional"}
+              className="text-base text-white mb-3 hidden lg:inline"
+            >
               A Core Escola de Negócios
-            </a>
-            <a className="text-base text-white mb-3 hidden lg:inline" href="#">
+            </Link>
+            <Link
+              className="text-base text-white mb-3 hidden lg:inline"
+              to={"/institucional"}
+            >
               Missão, Visão e Valores
-            </a>
-            <a className="text-base text-white mb-3 hidden lg:inline" href="#">
+            </Link>
+            <Link
+              className="text-base text-white mb-3 hidden lg:inline"
+              to={"/institucional"}
+            >
               Diferenciais
-            </a>
-            <a className="text-base text-white mb-3 hidden lg:inline" href="#">
+            </Link>
+            <Link
+              to={"/institucional"}
+              className="text-base text-white mb-3 hidden lg:inline"
+            >
               Parceiros
-            </a>
-            <a className="text-base text-white hidden lg:inline" href="#">
-              Nossa equipe
-            </a>
+            </Link>
           </div>
         </div>
       </div>
