@@ -22,8 +22,8 @@ export function Header() {
 
   return (
     <div className="flex flex-col">
-      <div className="bg-blue300 h-[85px] flex justify-between items-center text-white px-8 lg:px-10 xl:px-20 ">
-        <div className="text-xs md:text-sm flex gap-2 items-center">
+      <div className="bg-blue300 h-[85px] flex justify-between items-end md:items-center text-white px-8 lg:px-10 xl:px-20 pb-2 md:pb-0">
+        <div className="text-xs md:text-sm flex gap-2 items-end md:items-center">
           <p className=" flex-1">Siga nossas redes sociais</p>
           <div className="flex gap-1">
             <a

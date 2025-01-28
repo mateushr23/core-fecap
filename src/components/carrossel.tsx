@@ -1,6 +1,8 @@
 import { Swiper, SwiperSlide } from "swiper/react"
 import { Navigation } from "swiper/modules" // Ativa o uso de setas
+// @ts-ignore
 import "swiper/css"
+// @ts-ignore
 import "swiper/css/navigation"
 import { useState, useEffect } from "react"
 import carrossel1 from "../assets/images/carrossel1.png"
