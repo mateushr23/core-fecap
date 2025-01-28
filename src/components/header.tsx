@@ -65,11 +65,13 @@ export function Header() {
       </div>
       <div className="flex h-[100px] items-center bg-white text-black px-8 lg:px-10 xl:px-20 justify-between">
         {/* Logo */}
-        <img
-          className="w-40 lg:w-auto xl:w-auto"
-          src={logo}
-          alt="Logo da Core e da Fecap"
-        />
+        <Link to={"/"} onClick={() => window.scrollTo(0, 0)}>
+          <img
+            className="w-40 lg:w-auto xl:w-auto"
+            src={logo}
+            alt="Logo da Core e da Fecap"
+          />
+        </Link>
 
         {/* Menu (centralizado em telas maiores) */}
         <div className="hidden lg:flex gap-6 text-blue300 font-semibold text-sm">
@@ -86,9 +88,9 @@ export function Header() {
           <Link to={"/mba"} onClick={() => window.scrollTo(0, 0)}>
             MBA
           </Link>
-          <Link to={"/tecnicos"} onClick={() => window.scrollTo(0, 0)}>
+          {/* <Link to={"/tecnicos"} onClick={() => window.scrollTo(0, 0)}>
             TÉCNICOS
-          </Link>
+          </Link> */}
           <Link to={"/incompany"} onClick={() => window.scrollTo(0, 0)}>
             IN-COMPANY
           </Link>
@@ -125,9 +127,9 @@ export function Header() {
               <Link to={"/mba"} onClick={() => window.scrollTo(0, 0)}>
                 MBA
               </Link>
-              <Link to={"/tecnicos"} onClick={() => window.scrollTo(0, 0)}>
+              {/* <Link to={"/tecnicos"} onClick={() => window.scrollTo(0, 0)}>
                 TÉCNICOS
-              </Link>
+              </Link> */}
               <Link to={"/incompany"} onClick={() => window.scrollTo(0, 0)}>
                 IN-COMPANY
               </Link>
